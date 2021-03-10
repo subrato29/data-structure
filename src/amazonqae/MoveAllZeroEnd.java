@@ -7,6 +7,10 @@ import java.util.Arrays;
 public class MoveAllZeroEnd {
 
 	public static int[] solution (int [] arr) {
+		if (arr == null) {
+			return new int[] {};
+		}
+		
 		int i = 0;
 		int j = 0;
 		
