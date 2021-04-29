@@ -1,7 +1,5 @@
 package amazonqae;
 
-import java.util.Arrays;
-
 public class RemoveDuplicateFromArrayWithoutUsingExtraSpace {
 
 	public static int removeDuplicates(int[] A) {
@@ -13,11 +11,10 @@ public class RemoveDuplicateFromArrayWithoutUsingExtraSpace {
 	 
 		while (i < A.length) {
 			if (A[i] != A[j]) {
-				System.out.println(A[j]);
 				j++;
 				A[j] = A[i];
 			}
-	          i++;
+	        i++;
 		}
 		return j + 1;
 	}

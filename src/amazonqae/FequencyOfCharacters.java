@@ -8,19 +8,12 @@ import java.util.Map;
 public class FequencyOfCharacters {
 	
 	public static String solution(String str) {
-		Map<Character, Integer> map = new HashMap<>();
+		Map<Character, Integer> map = new HashMap<Character, Integer>();
 		
 		char[] ch = str.toCharArray();
 		
 		for (int i = 0; i < ch.length; i++) {
-			Integer count = map.get(ch[i]);
-			
-			if (count == null) {
-				count = 1;
-			} else {
-				count++;
-			}
-			map.put (ch[i], count);
+			map.put(ch[i], map.getOrDefault(ch[i], 0) + 1);
 		}
 		str = "";
 		for (Map.Entry m : map.entrySet()) {

@@ -1,3 +1,4 @@
 - Complete binary tree- If a binary tree is filled from left node to right
 - Full binary tree- If leaf node is having either no children or K-th children(for K-aries tree)
 - Perfect binary tree- if all leaf nodes have same depth.
+- BST - right node_value > root node_value > left node_value

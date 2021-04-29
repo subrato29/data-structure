@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class RemoveDuplicateFromArray {
+public class RemoveDuplicateFromSortedArray {
 
 	public static Object[] solution (int [] arr) {
 		Set<Integer> set = new HashSet<>();

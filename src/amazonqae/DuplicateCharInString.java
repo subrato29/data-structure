@@ -8,7 +8,7 @@ import java.util.TreeSet;
 public class DuplicateCharInString {
 
 	public static int solution (String input) {
-		Set<Character> set = new TreeSet<>();
+		Set<Character> set = new TreeSet<Character>();
 		
 		int count = 0;
 		

@@ -11,14 +11,7 @@ public class FirstUniqueCharacterInAString {
 		char[] ch = str.toCharArray();
 		
 		for (int i = 0; i < ch.length; i++) {
-			Integer count = map.get(ch[i]);
-			
-			if (count == null) {
-				count = 1;
-			} else {
-				count ++;
-			}
-			map.put (ch[i], count);
+			map.put(ch[i], map.getOrDefault(ch[i], 0) + 1);
 		}
 		
 		for (int i = 0; i < ch.length; i++) {

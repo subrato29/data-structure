@@ -1,4 +1,4 @@
-package apple;
+package leetcode_string;
 
 public class CharSequenceInWordWithPosition {
 
