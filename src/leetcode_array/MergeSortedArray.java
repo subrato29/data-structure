@@ -21,18 +21,14 @@ import java.util.Arrays;
 public class MergeSortedArray {
 	
 	public int[] merge(int[] nums1, int m, int[] nums2, int n) {
-		int[] result = new int[m + n];
-		int count = 0;
-        for (int i = 0; i < m; i++) {
-        	result[count] = nums1[i];
-        	count++;
+		int newLength = m + n;
+        int counter = 0;
+        for (int i = m; i < newLength; i++) {
+            nums1[i] = nums2[counter];
+            counter++;
         }
-        for (int i = 0; i < n; i++) {
-        	result[count] = nums2[i];
-        	count++;
-        }
-        Arrays.sort(result);
-		return result;
+        Arrays.sort(nums1);
+        return nums1;
     }
 	
 	public static void main(String[] args) {

@@ -29,9 +29,30 @@ public class ToLowerCase {
         return res.toString();
     }
 	
+	public static int maxRepeating(String sequence, String word) {
+        if (sequence.indexOf(word) == -1) {
+            return 0;
+        }
+        int counter = 0;
+        while (sequence.indexOf(word) != -1) {
+        	counter++;
+            int index = sequence.indexOf(word);
+            sequence = sequence.substring(index + word.length());
+            if (word.length() == sequence.length()) {
+            	break;
+            }
+        }
+        return counter;
+    }
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(2 == 2);
+		//System.out.println(2 == 2);
+		String str = "aaabaaaabaaabaaaabaaaabaaaabaaaaba";
+		//System.out.println(str.substring(2));
+		//"aaabaaaabaaabaaaabaaaabaaaabaaaaba"
+		//"aaaba"
+		System.out.println(maxRepeating ("aaabaaaabaaabaaaabaaaabaaaabaaaaba", "aaaba"));
 	}
 
 }

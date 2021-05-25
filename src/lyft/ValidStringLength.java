@@ -45,6 +45,8 @@ public class ValidStringLength {
 	
 	public static void main(String[] args) {
 		System.out.println(solution ("{}([)]["));
+		String string = "abcdefg";
+		System.out.println(string.substring(0, 2));
 	}
 
 }

@@ -22,7 +22,7 @@ Input: haystack = "", needle = ""
 Output: 0
  */
 
-package google;
+package leetcode_twopointer;
 
 public class Implement_StrStr {
 
@@ -57,8 +57,7 @@ public class Implement_StrStr {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//System.out.println(strStr("Happy birthday", "py"));
-		System.out.println("ababc".substring(0, 1));
+		System.out.println(strStr("Happy birthday", "py"));
 	}
 
 }
