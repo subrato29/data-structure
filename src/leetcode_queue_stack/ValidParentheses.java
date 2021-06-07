@@ -12,7 +12,7 @@ public class ValidParentheses {
 		map.put ('{','}');
 		map.put ('[',']');
 		
-		Stack<Character> stack = new Stack();
+		Stack<Character> stack = new Stack<Character>();
 		
 		for (int i = 0; i < input.length(); i++) {
 			char curr = input.charAt(i);
@@ -20,7 +20,7 @@ public class ValidParentheses {
 			if (map.containsKey (curr)) {
 				stack.push (curr);
 			} else if (map.values().contains(curr)){
-				if (!stack.empty() && map.get (stack.peek())==curr) {
+				if (!stack.empty() && map.get (stack.peek()) == curr) {
 					stack.pop();
 				} else {
 					return false;
