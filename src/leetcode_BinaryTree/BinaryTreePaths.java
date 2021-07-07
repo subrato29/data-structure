@@ -27,6 +27,7 @@ public class BinaryTreePaths {
 			this.val = val;
 		}
 	}
+	//Solution
 	public List<String> binaryTreePaths(TreeNode root) {
         ArrayList<String> list = new ArrayList<String>();
         binaryTreePathsHelper(root, "", list);
