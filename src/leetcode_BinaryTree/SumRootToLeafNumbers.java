@@ -35,19 +35,19 @@ package leetcode_BinaryTree;
 import java.util.ArrayList;
 
 public class SumRootToLeafNumbers {
-	
-	public static class TreeNode {
-		public int value;
-		public TreeNode left;
-		public TreeNode right;
-		
-		public TreeNode (int value) {
-			this.value = value;
-		}
-	}
-	
-	public int sumNumbers(TreeNode root) {
-        ArrayList<Integer> listOfSum = new ArrayList<Integer>();
+
+    public static class TreeNode {
+        public int value;
+        public TreeNode left;
+        public TreeNode right;
+
+        public TreeNode(int value) {
+            this.value = value;
+        }
+    }
+
+    public int sumNumbers(TreeNode root) {
+        ArrayList < Integer > listOfSum = new ArrayList < Integer > ();
         int totSum = 0;
         sumNumberHelper(root, "0", listOfSum);
         for (int i = 0; i < listOfSum.size(); i++) {
@@ -55,8 +55,8 @@ public class SumRootToLeafNumbers {
         }
         return totSum;
     }
-	
-	public void sumNumberHelper(TreeNode node, String runningSum, ArrayList<Integer> sum) {
+
+    public void sumNumberHelper(TreeNode node, String runningSum, ArrayList < Integer > sum) {
         if (node == null) {
             return;
         }
@@ -68,10 +68,10 @@ public class SumRootToLeafNumbers {
         sumNumberHelper(node.left, runningSum, sum);
         sumNumberHelper(node.right, runningSum, sum);
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

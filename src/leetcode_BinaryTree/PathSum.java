@@ -34,38 +34,38 @@ import java.util.List;
 
 public class PathSum {
 
-	public static class TreeNode {
-		public int val;
-		public TreeNode left;
-		public TreeNode right;
-		
-		public TreeNode (int val) {
-			this.val = val;
-		}
-	}
-	
-	public List<List<Integer>> pathSum(TreeNode root, int targetSum) {
-        ArrayList<List<Integer>> list = new ArrayList<List<Integer>>();
-        pathSumHelper(root, list, new ArrayList<Integer>(), targetSum);
+    public static class TreeNode {
+        public int val;
+        public TreeNode left;
+        public TreeNode right;
+
+        public TreeNode(int val) {
+            this.val = val;
+        }
+    }
+
+    public List < List < Integer >> pathSum(TreeNode root, int targetSum) {
+        ArrayList < List < Integer >> list = new ArrayList < List < Integer >> ();
+        pathSumHelper(root, list, new ArrayList < Integer > (), targetSum);
         return list;
     }
-    
-    public void pathSumHelper(TreeNode node, ArrayList<List<Integer>> list, ArrayList<Integer> path, int sum) {
+
+    public void pathSumHelper(TreeNode node, ArrayList < List < Integer >> list, ArrayList < Integer > path, int sum) {
         if (node == null) {
             return;
         }
-        path.add (node.val);
+        path.add(node.val);
         if (sum == node.val && node.left == null && node.right == null) {
-            list.add (path);
+            list.add(path);
             return;
         }
-        pathSumHelper(node.left, list, new ArrayList<Integer>(path), sum - node.val);
-        pathSumHelper(node.right, list, new ArrayList<Integer>(path), sum - node.val);
+        pathSumHelper(node.left, list, new ArrayList < Integer > (path), sum - node.val);
+        pathSumHelper(node.right, list, new ArrayList < Integer > (path), sum - node.val);
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

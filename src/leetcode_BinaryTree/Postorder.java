@@ -28,41 +28,41 @@ import java.util.List;
 
 public class Postorder {
 
-	class Node {
-	    public int val;
-	    public List<Node> children;
+    class Node {
+        public int val;
+        public List < Node > children;
 
-	    public Node() {}
+        public Node() {}
 
-	    public Node(int _val) {
-	        val = _val;
-	    }
+        public Node(int _val) {
+            val = _val;
+        }
 
-	    public Node(int _val, List<Node> _children) {
-	        val = _val;
-	        children = _children;
-	    }
-	}
-	
-	// solution
-	public List<Integer> postorder(Node root) {
-        List<Integer> list = new ArrayList<Integer>();
+        public Node(int _val, List < Node > _children) {
+            val = _val;
+            children = _children;
+        }
+    }
+
+    // solution
+    public List < Integer > postorder(Node root) {
+        List < Integer > list = new ArrayList < Integer > ();
         return helper(root, list);
     }
-    
-    public List<Integer> helper(Node node, List<Integer> list) {
+
+    public List < Integer > helper(Node node, List < Integer > list) {
         if (node != null) {
-            for (Node child : node.children) {
+            for (Node child: node.children) {
                 helper(child, list);
             }
             list.add(node.val);
         }
         return list;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

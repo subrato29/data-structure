@@ -30,28 +30,28 @@ package leetcode_BinaryTree;
 
 public class IsSameTree {
 
-	class BinaryTree {
-		int value;
-		BinaryTree left = null;
-		BinaryTree right = null;
-		
-		BinaryTree(int value) {
-			this.value = value;
-		}
-	}
-	
-	public boolean isSameTree(BinaryTree p, BinaryTree q) {
+    class BinaryTree {
+        int value;
+        BinaryTree left = null;
+        BinaryTree right = null;
+
+        BinaryTree(int value) {
+            this.value = value;
+        }
+    }
+
+    public boolean isSameTree(BinaryTree p, BinaryTree q) {
         if (p == null && q == null) {
             return true;
-        } else if (p == null || q == null){
+        } else if (p == null || q == null) {
             return false;
         }
-        return (p.value == q.value) && (isSameTree (p.left, q.left) && isSameTree (p.right, q.right));
+        return (p.value == q.value) && (isSameTree(p.left, q.left) && isSameTree(p.right, q.right));
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

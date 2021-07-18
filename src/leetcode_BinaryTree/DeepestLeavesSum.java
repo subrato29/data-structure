@@ -6,24 +6,24 @@ import leetcode_BinaryTree.BinaryTreePaths.TreeNode;
 
 public class DeepestLeavesSum {
 
-	public static class TreeNode {
-		public int val;
-		public TreeNode left;
-		public TreeNode right;
-		
-		public TreeNode (int val) {
-			this.val = val;
-		}
-	}
-	
-	//Solution
-	public int deepestLeavesSum(TreeNode root) {
-        TreeMap<Integer, Integer> map = new TreeMap<Integer, Integer>();
+    public static class TreeNode {
+        public int val;
+        public TreeNode left;
+        public TreeNode right;
+
+        public TreeNode(int val) {
+            this.val = val;
+        }
+    }
+
+    //Solution
+    public int deepestLeavesSum(TreeNode root) {
+        TreeMap < Integer, Integer > map = new TreeMap < Integer, Integer > ();
         helper(root, 0, 0, map);
         return map.get(map.lastKey());
     }
-	
-	public void helper(TreeNode node, int depth, int sum, TreeMap<Integer, Integer> map) {
+
+    public void helper(TreeNode node, int depth, int sum, TreeMap < Integer, Integer > map) {
         if (node == null) {
             return;
         }
@@ -34,10 +34,10 @@ public class DeepestLeavesSum {
         helper(node.left, depth + 1, sum, map);
         helper(node.right, depth + 1, sum, map);
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

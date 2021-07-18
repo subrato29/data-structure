@@ -26,17 +26,17 @@ https://www.youtube.com/watch?v=TzkfuLgpUxc
  */
 public class SumOfLeftLeaves {
 
-	public static class TreeNode {
-		public int val;
-		public TreeNode left;
-		public TreeNode right;
-		
-		public TreeNode (int val) {
-			this.val = val;
-		}
-	}
-	
-	public int sumOfLeftLeaves(TreeNode root) {
+    public static class TreeNode {
+        public int val;
+        public TreeNode left;
+        public TreeNode right;
+
+        public TreeNode(int val) {
+            this.val = val;
+        }
+    }
+
+    public int sumOfLeftLeaves(TreeNode root) {
         if (root == null) {
             return 0;
         }
@@ -55,10 +55,10 @@ public class SumOfLeftLeaves {
         }
         return sum;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

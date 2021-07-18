@@ -20,29 +20,29 @@ package leetcode_BinaryTree;
 import java.util.ArrayList;
 
 public class HasPathSum {
-	
-	public static class TreeNode {
-		public int val;
-		public TreeNode left;
-		public TreeNode right;
-		
-		public TreeNode (int val) {
-			this.val = val;
-		}
-	}
-	
-	public boolean hasPathSum(TreeNode root, int targetSum) {
+
+    public static class TreeNode {
+        public int val;
+        public TreeNode left;
+        public TreeNode right;
+
+        public TreeNode(int val) {
+            this.val = val;
+        }
+    }
+
+    public boolean hasPathSum(TreeNode root, int targetSum) {
         if (root == null && targetSum == 0) {
             return false;
         }
-        ArrayList<Integer> listOfSum = new ArrayList<Integer>();
-        hasPathSumHelper (root, 0, listOfSum);
+        ArrayList < Integer > listOfSum = new ArrayList < Integer > ();
+        hasPathSumHelper(root, 0, listOfSum);
         return listOfSum.contains(targetSum);
     }
-	
-	public void hasPathSumHelper(TreeNode root, int branchSum, ArrayList<Integer> listOfSum) {
+
+    public void hasPathSumHelper(TreeNode root, int branchSum, ArrayList < Integer > listOfSum) {
         if (root == null) {
-           return;
+            return;
         }
         branchSum += root.val;
         if (root.left == null && root.right == null) {
@@ -50,11 +50,11 @@ public class HasPathSum {
             return;
         }
         hasPathSumHelper(root.left, branchSum, listOfSum);
-        hasPathSumHelper(root.right, branchSum, listOfSum);  
+        hasPathSumHelper(root.right, branchSum, listOfSum);
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-	}
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+    }
 
 }

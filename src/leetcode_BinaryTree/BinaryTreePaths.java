@@ -18,23 +18,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BinaryTreePaths {
-	public static class TreeNode {
-		public int val;
-		public TreeNode left;
-		public TreeNode right;
-		
-		public TreeNode (int val) {
-			this.val = val;
-		}
-	}
-	//Solution
-	public List<String> binaryTreePaths(TreeNode root) {
-        ArrayList<String> list = new ArrayList<String>();
+    public static class TreeNode {
+        public int val;
+        public TreeNode left;
+        public TreeNode right;
+
+        public TreeNode(int val) {
+            this.val = val;
+        }
+    }
+    //Solution
+    public List < String > binaryTreePaths(TreeNode root) {
+        ArrayList < String > list = new ArrayList < String > ();
         binaryTreePathsHelper(root, "", list);
         return list;
     }
-    
-    public void binaryTreePathsHelper(TreeNode root, String element, ArrayList<String> list) {
+
+    public void binaryTreePathsHelper(TreeNode root, String element, ArrayList < String > list) {
         if (root == null) {
             return;
         }
@@ -48,9 +48,9 @@ public class BinaryTreePaths {
         binaryTreePathsHelper(root.left, element, list);
         binaryTreePathsHelper(root.right, element, list);
     }
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

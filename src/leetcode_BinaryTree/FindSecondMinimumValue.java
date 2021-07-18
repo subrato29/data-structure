@@ -32,19 +32,19 @@ import java.util.Collections;
 
 public class FindSecondMinimumValue {
 
-	public static class TreeNode {
-		public int val;
-		public TreeNode left;
-		public TreeNode right;
-		
-		public TreeNode (int val) {
-			this.val = val;
-		}
-	}
-	
-	//Solution
-	public int findSecondMinimumValue(TreeNode root) {
-        ArrayList<Integer> list = new ArrayList<Integer>();
+    public static class TreeNode {
+        public int val;
+        public TreeNode left;
+        public TreeNode right;
+
+        public TreeNode(int val) {
+            this.val = val;
+        }
+    }
+
+    //Solution
+    public int findSecondMinimumValue(TreeNode root) {
+        ArrayList < Integer > list = new ArrayList < Integer > ();
         helper(root, list);
         if (list.size() > 1) {
             Collections.sort(list);
@@ -52,23 +52,23 @@ public class FindSecondMinimumValue {
         }
         return -1;
     }
-    
-    public void helper(TreeNode node, ArrayList<Integer> list) {
+
+    public void helper(TreeNode node, ArrayList < Integer > list) {
         if (node == null) {
             return;
         }
         if (node.left == null && node.right == null) {
             if (!list.contains(node.val)) {
-                list.add (node.val);
+                list.add(node.val);
             }
         }
         helper(node.left, list);
         helper(node.right, list);
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }
