@@ -26,8 +26,8 @@ import java.util.Map;
 
 public class RepeatedNTimes {
 
-	public int repeatedNTimes(int[] nums) {
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+    public int repeatedNTimes(int[] nums) {
+        Map < Integer, Integer > map = new HashMap < Integer, Integer > ();
         for (int i = 0; i < nums.length; i++) {
             int num = nums[i];
             map.put(num, map.getOrDefault(num, 0) + 1);
@@ -35,7 +35,7 @@ public class RepeatedNTimes {
         int n = nums.length / 2;
 
         if (n + 1 == map.size()) {
-            Iterator<Integer> itr = map.keySet().iterator();
+            Iterator < Integer > itr = map.keySet().iterator();
             while (itr.hasNext()) {
                 int key = itr.next();
                 if (map.get(key) == n) {
@@ -45,10 +45,10 @@ public class RepeatedNTimes {
         }
         return 0;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

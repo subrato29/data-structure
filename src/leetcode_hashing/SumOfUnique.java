@@ -28,13 +28,13 @@ import java.util.Map;
 
 public class SumOfUnique {
 
-	public int sumOfUnique(int[] nums) {
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+    public int sumOfUnique(int[] nums) {
+        Map < Integer, Integer > map = new HashMap < Integer, Integer > ();
         for (int i = 0; i < nums.length; i++) {
             map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
         }
         int runningSum = 0;
-        Iterator<Integer> itr = map.keySet().iterator();
+        Iterator < Integer > itr = map.keySet().iterator();
         while (itr.hasNext()) {
             int curr = itr.next();
             if (map.get(curr) == 1) {
@@ -43,10 +43,10 @@ public class SumOfUnique {
         }
         return runningSum;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

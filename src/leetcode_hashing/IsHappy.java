@@ -38,8 +38,8 @@ import java.util.Set;
 
 public class IsHappy {
 
-	public boolean isHappy(int n) {
-        Set<Integer> set = new HashSet<Integer>();
+    public boolean isHappy(int n) {
+        Set < Integer > set = new HashSet < Integer > ();
         while (!set.contains(n)) {
             set.add(n);
             n = getSum(n);
@@ -49,7 +49,7 @@ public class IsHappy {
         }
         return false;
     }
-    
+
     public int getSum(int n) {
         int sum = 0;
         while (n > 0) {
@@ -58,10 +58,10 @@ public class IsHappy {
         }
         return sum;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

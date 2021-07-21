@@ -31,12 +31,12 @@ import java.util.Set;
 
 public class Intersection {
 
-	// by Hashing
-	public int[] intersection(int[] nums1, int[] nums2) {
-        Set<Integer> set = new HashSet<Integer>();
-        List<Integer> list = new ArrayList<Integer>();
+    // by Hashing
+    public int[] intersection(int[] nums1, int[] nums2) {
+        Set < Integer > set = new HashSet < Integer > ();
+        List < Integer > list = new ArrayList < Integer > ();
         for (int i = 0; i < nums1.length; i++) {
-            set.add (nums1[i]);
+            set.add(nums1[i]);
         }
         for (int i = 0; i < nums2.length; i++) {
             int key = nums2[i];
@@ -51,10 +51,10 @@ public class Intersection {
         }
         return result;
     }
-	
-	//by twopointer
-	public int[] intersection1(int[] nums1, int[] nums2) {
-        Set<Integer> set = new HashSet<Integer>();
+
+    //by twopointer
+    public int[] intersection1(int[] nums1, int[] nums2) {
+        Set < Integer > set = new HashSet < Integer > ();
         Arrays.sort(nums1);
         Arrays.sort(nums2);
         int index1 = 0;
@@ -71,18 +71,18 @@ public class Intersection {
             }
         }
         int[] result = new int[set.size()];
-        Iterator<Integer> itr = set.iterator();
+        Iterator < Integer > itr = set.iterator();
         int counter = 0;
-        while(itr.hasNext()) {
+        while (itr.hasNext()) {
             result[counter] = itr.next();
             counter++;
         }
         return result;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

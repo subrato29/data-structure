@@ -27,27 +27,27 @@ import java.util.Set;
 
 public class CustomSortString {
 
-	public static String solution (String string1, String string2) {
-		Set<String> set = new LinkedHashSet<String>();
-		for (int i = 0; i < string1.length(); i++) {
-			char ch = string1.charAt(i);
-			set.add(String.valueOf(ch));
-		}
-		for (int i = 0; i < string2.length(); i++) {
-			char ch = string2.charAt(i);
-			set.add(String.valueOf(ch));
-		}
-		StringBuilder sb = new StringBuilder();
-		Iterator<String> itr = set.iterator();
-		while (itr.hasNext()) {
-			sb.append(itr.next());
-		}
-		return sb.toString();
-	}
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println(solution ("cba", "abcd"));
-	}
+    public static String solution(String string1, String string2) {
+        Set < String > set = new LinkedHashSet < String > ();
+        for (int i = 0; i < string1.length(); i++) {
+            char ch = string1.charAt(i);
+            set.add(String.valueOf(ch));
+        }
+        for (int i = 0; i < string2.length(); i++) {
+            char ch = string2.charAt(i);
+            set.add(String.valueOf(ch));
+        }
+        StringBuilder sb = new StringBuilder();
+        Iterator < String > itr = set.iterator();
+        while (itr.hasNext()) {
+            sb.append(itr.next());
+        }
+        return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        System.out.println(solution("cba", "abcd"));
+    }
 
 }

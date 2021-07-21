@@ -25,19 +25,19 @@ import java.util.Set;
 
 public class UniqueOccurrences {
 
-	public boolean uniqueOccurrences(int[] arr) {
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+    public boolean uniqueOccurrences(int[] arr) {
+        Map < Integer, Integer > map = new HashMap < Integer, Integer > ();
         for (int i = 0; i < arr.length; i++) {
             int num = arr[i];
             map.put(num, map.getOrDefault(num, 0) + 1);
         }
-        Set<Integer> set = new HashSet<Integer>(map.values());
+        Set < Integer > set = new HashSet < Integer > (map.values());
         return map.size() == set.size();
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

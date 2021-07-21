@@ -45,14 +45,14 @@ import java.util.Map;
 
 public class FindLucky {
 
-	public int findLucky(int[] arr) {
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+    public int findLucky(int[] arr) {
+        Map < Integer, Integer > map = new HashMap < Integer, Integer > ();
         for (int i = 0; i < arr.length; i++) {
             map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
         }
         int largest = 0;
         boolean isPresentLuckyNo = false;
-        Iterator<Integer> itr = map.keySet().iterator();
+        Iterator < Integer > itr = map.keySet().iterator();
         while (itr.hasNext()) {
             int key = itr.next();
             int value = map.get(key);
@@ -68,10 +68,10 @@ public class FindLucky {
         }
         return largest;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

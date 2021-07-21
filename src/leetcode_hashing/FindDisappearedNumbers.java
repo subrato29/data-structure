@@ -26,14 +26,14 @@ import java.util.List;
 
 public class FindDisappearedNumbers {
 
-	public List<Integer> findDisappearedNumbers(int[] nums) {
+    public List < Integer > findDisappearedNumbers(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
             int index = Math.abs(nums[i]) - 1;
             if (nums[index] > 0) {
-                nums[index] = - nums[index];
+                nums[index] = -nums[index];
             }
         }
-        List<Integer> missing = new ArrayList<Integer>();
+        List < Integer > missing = new ArrayList < Integer > ();
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] > 0) {
                 missing.add(i + 1);
@@ -41,10 +41,10 @@ public class FindDisappearedNumbers {
         }
         return missing;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

@@ -30,17 +30,17 @@ import java.util.Map;
 
 public class Intersect {
 
-	public static int[] intersect(int[] nums1, int[] nums2) {
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+    public static int[] intersect(int[] nums1, int[] nums2) {
+        Map < Integer, Integer > map = new HashMap < Integer, Integer > ();
         for (int i = 0; i < nums1.length; i++) {
             int num = nums1[i];
             map.put(num, map.getOrDefault(num, 0) + 1);
         }
-        List<Integer> list = new ArrayList<Integer>();
+        List < Integer > list = new ArrayList < Integer > ();
         for (int i = 0; i < nums2.length; i++) {
             int key = nums2[i];
             if (map.containsKey(key)) {
-            	int value = map.get(key);
+                int value = map.get(key);
                 if (value == 0) {
                     map.remove(key);
                 } else {
@@ -55,11 +55,21 @@ public class Intersect {
         }
         return result;
     }
-	
-	public static void main(String[] args) {
-		int[] nums1 = {4,9,5};
-		int[] nums2 = {9,4,9,8,4};
-		System.out.println(Arrays.toString(intersect(nums1, nums2)));
-	}
+
+    public static void main(String[] args) {
+        int[] nums1 = {
+            4,
+            9,
+            5
+        };
+        int[] nums2 = {
+            9,
+            4,
+            9,
+            8,
+            4
+        };
+        System.out.println(Arrays.toString(intersect(nums1, nums2)));
+    }
 
 }

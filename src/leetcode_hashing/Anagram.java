@@ -32,33 +32,33 @@ import java.util.List;
 
 public class Anagram {
 
-	public static List<Integer> solution (String input, String string) {
-		List<Integer> list = new ArrayList<Integer>();
-		if (input.length() < string.length()) {
-			return list;
-		}
-		if (string == "" || input == "") {
-			return list;
-		}
-		int i = 0;
-		int limitOfIteration = input.length() - string.length() + 1;
-		while (i < limitOfIteration) {
-			char[] ch = input.substring(i, i + string.length()).toCharArray();
-			Arrays.sort(ch);
-			String sorted = new String(ch);
-			
-			ch = string.toCharArray();
-			Arrays.sort(ch);
-			string = new String(ch); 
-			if (sorted.equals(string)) {
-				list.add(i);
-			}
-			i++;
-		}
-		return list;
-	}
-	public static void main(String[] args) {
-		System.out.println(solution ("cbaebabac", "abc"));
-	}
+    public static List < Integer > solution(String input, String string) {
+        List < Integer > list = new ArrayList < Integer > ();
+        if (input.length() < string.length()) {
+            return list;
+        }
+        if (string == "" || input == "") {
+            return list;
+        }
+        int i = 0;
+        int limitOfIteration = input.length() - string.length() + 1;
+        while (i < limitOfIteration) {
+            char[] ch = input.substring(i, i + string.length()).toCharArray();
+            Arrays.sort(ch);
+            String sorted = new String(ch);
+
+            ch = string.toCharArray();
+            Arrays.sort(ch);
+            string = new String(ch);
+            if (sorted.equals(string)) {
+                list.add(i);
+            }
+            i++;
+        }
+        return list;
+    }
+    public static void main(String[] args) {
+        System.out.println(solution("cbaebabac", "abc"));
+    }
 
 }

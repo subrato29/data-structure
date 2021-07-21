@@ -17,29 +17,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class KdiffPairsInanArray {
-	
-	public static int solution (int[] array, int k) {
-		if (array.length == 0) {
-			return 0;
-		}
-		List<Integer> list = new ArrayList<Integer>();
-		int count = 0;
-		for (int i = 0; i < array.length; i++) {
-			list.add(array[i]);
-		}
-		for (int i = 0; i < array.length; i++) {
-			int complement = Math.abs(array[i] - k);
-			if (list.contains(complement) && (array[i] != complement)) {
-				System.out.println(array[i] + "===" + complement);
-				count++;
-			}
-		}
-		return count;
-	}
-	
-	public static void main(String[] args) {
-		int[] array = {1, 3, 1, 5, 4}; 
-		System.out.println(solution(array, 2));
-	}
+
+    public static int solution(int[] array, int k) {
+        if (array.length == 0) {
+            return 0;
+        }
+        List < Integer > list = new ArrayList < Integer > ();
+        int count = 0;
+        for (int i = 0; i < array.length; i++) {
+            list.add(array[i]);
+        }
+        for (int i = 0; i < array.length; i++) {
+            int complement = Math.abs(array[i] - k);
+            if (list.contains(complement) && (array[i] != complement)) {
+                System.out.println(array[i] + "===" + complement);
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static void main(String[] args) {
+        int[] array = {
+            1,
+            3,
+            1,
+            5,
+            4
+        };
+        System.out.println(solution(array, 2));
+    }
 
 }

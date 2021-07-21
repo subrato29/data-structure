@@ -25,12 +25,12 @@ import java.util.Map;
 
 public class UncommonFromSentences {
 
-	public String[] uncommonFromSentences(String s1, String s2) {
-        Map<String, Integer> map = new HashMap<String, Integer>();
+    public String[] uncommonFromSentences(String s1, String s2) {
+        Map < String, Integer > map = new HashMap < String, Integer > ();
         map = helper(s1, map);
         map = helper(s2, map);
-        List<String> list = new ArrayList<String>();
-        Iterator<String> itr = map.keySet().iterator();
+        List < String > list = new ArrayList < String > ();
+        Iterator < String > itr = map.keySet().iterator();
         while (itr.hasNext()) {
             String key = itr.next();
             if (map.get(key) == 1) {
@@ -39,18 +39,18 @@ public class UncommonFromSentences {
         }
         return list.toArray(new String[list.size()]);
     }
-    
-    public Map<String, Integer> helper (String S, Map<String, Integer> map) {
+
+    public Map < String, Integer > helper(String S, Map < String, Integer > map) {
         String[] string = S.split(" ");
         for (int i = 0; i < string.length; i++) {
-            map.put (string[i], map.getOrDefault(string[i], 0) + 1);
+            map.put(string[i], map.getOrDefault(string[i], 0) + 1);
         }
         return map;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

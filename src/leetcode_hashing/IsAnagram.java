@@ -26,41 +26,41 @@ import java.util.Map;
 
 public class IsAnagram {
 
-	public boolean isAnagram(String s, String t) {
+    public boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) {
             return false;
         }
-        Map<Character, Integer> sMap = new HashMap<Character, Integer>();
-        Map<Character, Integer> tMap = new HashMap<Character, Integer>();
+        Map < Character, Integer > sMap = new HashMap < Character, Integer > ();
+        Map < Character, Integer > tMap = new HashMap < Character, Integer > ();
         sMap = charWiseCount(s);
         tMap = charWiseCount(t);
- 
-        Iterator<Character> itr = sMap.keySet().iterator();
+
+        Iterator < Character > itr = sMap.keySet().iterator();
         while (itr.hasNext()) {
             char key = itr.next();
             if (tMap.keySet().contains(key)) {
                 if (!sMap.get(key).equals(tMap.get(key))) {
                     return false;
-                }   
+                }
             } else {
                 return false;
             }
         }
         return true;
     }
-    
-    public Map<Character, Integer> charWiseCount(String string) {
-        Map<Character, Integer> map = new HashMap<Character, Integer>();
+
+    public Map < Character, Integer > charWiseCount(String string) {
+        Map < Character, Integer > map = new HashMap < Character, Integer > ();
         for (int i = 0; i < string.length(); i++) {
             char ch = string.charAt(i);
             map.put(ch, map.getOrDefault(ch, 0) + 1);
         }
         return map;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

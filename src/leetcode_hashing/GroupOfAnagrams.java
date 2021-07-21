@@ -15,26 +15,33 @@ import java.util.Map;
 
 public class GroupOfAnagrams {
 
-	public static List<List<String>> solution (List<String> listOfWords) {
-		Map<String, List<String>> map = new HashMap <String, List<String>>();
-		
-		for (String word : listOfWords) {
-			char[] ch = word.toCharArray();
-			Arrays.sort(ch);
-			String sorted = new String(ch);
-			
-			if (map.containsKey(sorted)) {
-				map.get(sorted).add(word);
-			} else {
-				map.put(sorted, new ArrayList<String>(Arrays.asList(word)));
-			}
-		}
-		return new ArrayList<>(map.values());
-	}
-	
-	public static void main(String[] args) {
-		String[] arr = {"eat", "tea", "tan", "ate", "nat", "bat"};
-		System.out.println(solution (Arrays.asList(arr)));
-	}
+    public static List < List < String >> solution(List < String > listOfWords) {
+        Map < String, List < String >> map = new HashMap < String, List < String >> ();
+
+        for (String word: listOfWords) {
+            char[] ch = word.toCharArray();
+            Arrays.sort(ch);
+            String sorted = new String(ch);
+
+            if (map.containsKey(sorted)) {
+                map.get(sorted).add(word);
+            } else {
+                map.put(sorted, new ArrayList < String > (Arrays.asList(word)));
+            }
+        }
+        return new ArrayList < > (map.values());
+    }
+
+    public static void main(String[] args) {
+        String[] arr = {
+            "eat",
+            "tea",
+            "tan",
+            "ate",
+            "nat",
+            "bat"
+        };
+        System.out.println(solution(Arrays.asList(arr)));
+    }
 
 }

@@ -29,13 +29,13 @@ import java.util.Map;
 
 public class MajorityElement {
 
-	public int majorityElement(int[] nums) {
+    public int majorityElement(int[] nums) {
         int occurance = nums.length / 2;
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+        Map < Integer, Integer > map = new HashMap < Integer, Integer > ();
         for (int i = 0; i < nums.length; i++) {
             map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
         }
-        Iterator<Integer> itr = map.keySet().iterator();
+        Iterator < Integer > itr = map.keySet().iterator();
         while (itr.hasNext()) {
             int key = itr.next();
             int value = map.get(key);
@@ -45,10 +45,10 @@ public class MajorityElement {
         }
         return -1;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

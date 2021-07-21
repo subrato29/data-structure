@@ -27,8 +27,8 @@ import java.util.Map;
 
 public class CountCharacters {
 
-	public int countCharacters(String[] words, String chars) {
-        Map<Character, Integer> targetWord = new HashMap<Character, Integer>();
+    public int countCharacters(String[] words, String chars) {
+        Map < Character, Integer > targetWord = new HashMap < Character, Integer > ();
         targetWord = charWiseCount(chars);
         int sum = 0;
         for (int i = 0; i < words.length; i++) {
@@ -39,33 +39,33 @@ public class CountCharacters {
         }
         return sum;
     }
-    
-    public Map<Character, Integer> charWiseCount(String string) {
-        Map<Character, Integer> map = new HashMap<Character, Integer>();
+
+    public Map < Character, Integer > charWiseCount(String string) {
+        Map < Character, Integer > map = new HashMap < Character, Integer > ();
         for (int i = 0; i < string.length(); i++) {
             char ch = string.charAt(i);
             map.put(ch, map.getOrDefault(ch, 0) + 1);
         }
         return map;
     }
-    
-    public boolean wordsFormedByChars(Map<Character, Integer> word, Map<Character, Integer> targetWord) {
-        Iterator<Character> itr = word.keySet().iterator();
+
+    public boolean wordsFormedByChars(Map < Character, Integer > word, Map < Character, Integer > targetWord) {
+        Iterator < Character > itr = word.keySet().iterator();
         while (itr.hasNext()) {
             char key = itr.next();
             if (targetWord.keySet().contains(key)) {
                 if (word.get(key) > targetWord.get(key)) {
                     return false;
-                }   
+                }
             } else {
                 return false;
             }
         }
         return true;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-	}
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+    }
 
 }

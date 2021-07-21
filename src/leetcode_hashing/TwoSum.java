@@ -17,37 +17,48 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TwoSum {
-	
-	public static int[] solution (int[] array, int sum) {
-		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-		for (int i = 0; i < array.length; i++) {
-			map.put(array[i], i);
-		}
-		for (int i = 0; i < array.length; i++) {
-			int complement = sum - array[i];
-			if (map.containsKey(complement)) {
-				return new int[] {i, map.get(complement)};
-			}
-		}
-		return new int[] {};
-	}
-	
-	public static int[] solution1 (int[] array, int sum) {
-		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-		for (int i = 0; i < array.length; i++) {
-			int complement = sum - array[i];
-			if (map.containsKey(complement)) {
-				return new int[] {i, map.get(complement)};
-			} else {
-				map.put(array[i], i);
-			}
-		}
-		return new int[] {};
-	}
-	
-	public static void main(String[] args) {
-		int[] array = {2, 7, 11, 15};
-		System.out.println(Arrays.toString(solution (array, 22)));
-	}
+
+    public static int[] solution(int[] array, int sum) {
+        Map < Integer, Integer > map = new HashMap < Integer, Integer > ();
+        for (int i = 0; i < array.length; i++) {
+            map.put(array[i], i);
+        }
+        for (int i = 0; i < array.length; i++) {
+            int complement = sum - array[i];
+            if (map.containsKey(complement)) {
+                return new int[] {
+                    i,
+                    map.get(complement)
+                };
+            }
+        }
+        return new int[] {};
+    }
+
+    public static int[] solution1(int[] array, int sum) {
+        Map < Integer, Integer > map = new HashMap < Integer, Integer > ();
+        for (int i = 0; i < array.length; i++) {
+            int complement = sum - array[i];
+            if (map.containsKey(complement)) {
+                return new int[] {
+                    i,
+                    map.get(complement)
+                };
+            } else {
+                map.put(array[i], i);
+            }
+        }
+        return new int[] {};
+    }
+
+    public static void main(String[] args) {
+        int[] array = {
+            2,
+            7,
+            11,
+            15
+        };
+        System.out.println(Arrays.toString(solution(array, 22)));
+    }
 
 }

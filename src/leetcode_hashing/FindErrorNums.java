@@ -31,9 +31,12 @@ import java.util.Map;
 
 public class FindErrorNums {
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
-	public static int[] findErrorNums(int[] nums) {
-		Map < Integer, Integer > map = new HashMap();
+    @SuppressWarnings({
+        "unchecked",
+        "rawtypes"
+    })
+    public static int[] findErrorNums(int[] nums) {
+        Map < Integer, Integer > map = new HashMap();
         int dup = -1, missing = 1;
         for (int n: nums) {
             map.put(n, map.getOrDefault(n, 0) + 1);
@@ -43,16 +46,24 @@ public class FindErrorNums {
                 if (map.get(i) == 2)
                     dup = i;
             } else {
-                missing = i;  
+                missing = i;
             }
         }
-        return new int[]{dup, missing};
+        return new int[] {
+            dup,
+            missing
+        };
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int[] array = {1,2,2,4};
-		System.out.println(Arrays.toString(findErrorNums(array)));
-	}
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        int[] array = {
+            1,
+            2,
+            2,
+            4
+        };
+        System.out.println(Arrays.toString(findErrorNums(array)));
+    }
 
 }

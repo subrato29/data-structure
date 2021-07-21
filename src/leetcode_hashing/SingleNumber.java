@@ -32,23 +32,27 @@ import java.util.List;
 
 public class SingleNumber {
 
-	public static int singleNumber(int[] nums) {
-        List<Integer> list = new ArrayList<Integer>();
+    public static int singleNumber(int[] nums) {
+        List < Integer > list = new ArrayList < Integer > ();
         for (int i = 0; i < nums.length; i++) {
             int value = nums[i];
             if (list.contains(value)) {
                 list.remove(new Integer(value));
-            }else {
+            } else {
                 list.add(value);
             }
         }
         return list.get(0);
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int[] nums = {2, 2, 1};
-		System.out.println(singleNumber(nums));
-	}
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        int[] nums = {
+            2,
+            2,
+            1
+        };
+        System.out.println(singleNumber(nums));
+    }
 
 }

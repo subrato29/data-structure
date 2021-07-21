@@ -37,51 +37,51 @@ import java.util.List;
 import java.util.Map;
 
 public class SortCharByFrequency {
-	
-	public static String solution (String string) {
-		Map<Character, Integer> map = new HashMap<Character, Integer>();
-		int count = 1;
-		char[] ch = string.toCharArray();
-		for (int i = 0; i < ch.length; i++) {
-			char key = ch[i];
-			if (map.containsKey(key)) {
-				count++;
-				map.put(key, count);
-			} else {
-				map.put(key, count);
-				count = 1;
-			}
-		}
-		System.out.println(map);
-		
-		List<Integer> list = new ArrayList<>(map.values());
-		Collections.sort(list, Collections.reverseOrder());
-		
-		StringBuilder sb = new StringBuilder();
-		count = 0;
-		Iterator<Character> itr = map.keySet().iterator();
-		while (itr.hasNext() && sb.length() < string.length()) {
-			char key = itr.next();
-			int value = map.get(key);
-			if (value == list.get(count) && !sb.toString().contains(String.valueOf(key))) {
-				sb.append(helper (String.valueOf(key), value));
-				count++;
-				itr = map.keySet().iterator();
-			}
-		}
-		return sb.toString();
-	}
-	
-	public static String helper (String input, int iterator) {
-		String str = "";
-		for (int i = 0; i < iterator; i++) {
-			str += input;
-		}
-		return str;
-	}
-	
-	public static void main(String[] args) {
-		System.out.println(solution ("abcccgdffraaa"));
-	}
+
+    public static String solution(String string) {
+        Map < Character, Integer > map = new HashMap < Character, Integer > ();
+        int count = 1;
+        char[] ch = string.toCharArray();
+        for (int i = 0; i < ch.length; i++) {
+            char key = ch[i];
+            if (map.containsKey(key)) {
+                count++;
+                map.put(key, count);
+            } else {
+                map.put(key, count);
+                count = 1;
+            }
+        }
+        System.out.println(map);
+
+        List < Integer > list = new ArrayList < > (map.values());
+        Collections.sort(list, Collections.reverseOrder());
+
+        StringBuilder sb = new StringBuilder();
+        count = 0;
+        Iterator < Character > itr = map.keySet().iterator();
+        while (itr.hasNext() && sb.length() < string.length()) {
+            char key = itr.next();
+            int value = map.get(key);
+            if (value == list.get(count) && !sb.toString().contains(String.valueOf(key))) {
+                sb.append(helper(String.valueOf(key), value));
+                count++;
+                itr = map.keySet().iterator();
+            }
+        }
+        return sb.toString();
+    }
+
+    public static String helper(String input, int iterator) {
+        String str = "";
+        for (int i = 0; i < iterator; i++) {
+            str += input;
+        }
+        return str;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(solution("abcccgdffraaa"));
+    }
 
 }

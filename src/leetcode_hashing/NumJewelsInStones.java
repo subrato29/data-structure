@@ -28,11 +28,11 @@ import java.util.Set;
 
 public class NumJewelsInStones {
 
-	public int numJewelsInStones(String jewels, String stones) {
-        Set<Character> set = new HashSet<Character>();
+    public int numJewelsInStones(String jewels, String stones) {
+        Set < Character > set = new HashSet < Character > ();
         for (int i = 0; i < jewels.length(); i++) {
             char ch = jewels.charAt(i);
-            set.add (ch);
+            set.add(ch);
         }
         int counter = 0;
         for (int i = 0; i < stones.length(); i++) {
@@ -43,10 +43,10 @@ public class NumJewelsInStones {
         }
         return counter++;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }
