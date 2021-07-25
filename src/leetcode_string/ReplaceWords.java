@@ -32,57 +32,57 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReplaceWords {
-	
-	public static String solution(List<String> dictionary, String sentence) {
-		
-		if (dictionary.size() == 0) {
-			return null;
-		}
-		
-		if (sentence.length() == 0) {
-			return null;
-		}
-		
-		StringBuilder sb = new StringBuilder();
-		String[] array = sentence.split(" ");
-		for (int i = 0; i < array.length; i++) {
-			String temp = helper(dictionary, array[i]);
-			sb.append(temp + " ");
-		}
-		return sb.toString();
-	}
-	
-	public static String helper(List<String> list, String input) {
-		int len = 0;
-		int i = 0;
-		int count = 0;
-		
-		for (i = 0; i < list.size(); i++) {
-			String temp = list.get(i);
-			if (input.startsWith(temp.substring(0))) {
-				count++;
-				if (count == 1) {
-					len = temp.length();
-				} else {
-					len = Math.min(temp.length(), len);
-				}
-			}
-		}
-		if (len == 0) {
-			return input;
-		}
-		return input.substring(0, len);
-	}
- 	
-	public static void main(String[] args) {
-		String sentence = "the cattle was rattled by the battery";
-		List<String> dictionary = new ArrayList<String>();
-		dictionary.add("catt");
-		dictionary.add("cat");
-		dictionary.add("bat");
-		dictionary.add("rat");
-		
-		System.out.println(solution(dictionary, sentence));
-	}
+
+    public static String solution(List < String > dictionary, String sentence) {
+
+        if (dictionary.size() == 0) {
+            return null;
+        }
+
+        if (sentence.length() == 0) {
+            return null;
+        }
+
+        StringBuilder sb = new StringBuilder();
+        String[] array = sentence.split(" ");
+        for (int i = 0; i < array.length; i++) {
+            String temp = helper(dictionary, array[i]);
+            sb.append(temp + " ");
+        }
+        return sb.toString();
+    }
+
+    public static String helper(List < String > list, String input) {
+        int len = 0;
+        int i = 0;
+        int count = 0;
+
+        for (i = 0; i < list.size(); i++) {
+            String temp = list.get(i);
+            if (input.startsWith(temp.substring(0))) {
+                count++;
+                if (count == 1) {
+                    len = temp.length();
+                } else {
+                    len = Math.min(temp.length(), len);
+                }
+            }
+        }
+        if (len == 0) {
+            return input;
+        }
+        return input.substring(0, len);
+    }
+
+    public static void main(String[] args) {
+        String sentence = "the cattle was rattled by the battery";
+        List < String > dictionary = new ArrayList < String > ();
+        dictionary.add("catt");
+        dictionary.add("cat");
+        dictionary.add("bat");
+        dictionary.add("rat");
+
+        System.out.println(solution(dictionary, sentence));
+    }
 
 }

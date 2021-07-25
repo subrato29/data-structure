@@ -19,24 +19,24 @@
 package leetcode_string;
 
 public class RepeatedSubstringPattern {
-	
-	public static boolean solution (String string) {
-		StringBuilder sb = new StringBuilder();
-		for (int i = 0; i < string.length(); i++) {
-			sb.append(String.valueOf(string.charAt(i)));
-			if (sb.length() > 1) {
-				String complement = string.substring(i + 1, string.length());
-				if (complement.contains(sb)) {
-					return true;
-				}
-			}
-		}
-		return false;
-	}
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println(solution("abcabcabcabc"));
-	}
+
+    public static boolean solution(String string) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < string.length(); i++) {
+            sb.append(String.valueOf(string.charAt(i)));
+            if (sb.length() > 1) {
+                String complement = string.substring(i + 1, string.length());
+                if (complement.contains(sb)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        System.out.println(solution("abcabcabcabc"));
+    }
 
 }

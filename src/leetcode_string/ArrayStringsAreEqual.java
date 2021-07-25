@@ -25,7 +25,7 @@ package leetcode_string;
 
 public class ArrayStringsAreEqual {
 
-	public boolean arrayStringsAreEqual(String[] word1, String[] word2) {
+    public boolean arrayStringsAreEqual(String[] word1, String[] word2) {
         String string1 = "";
         for (int i = 0; i < word1.length; i++) {
             string1 += word1[i];
@@ -39,9 +39,9 @@ public class ArrayStringsAreEqual {
         }
         return false;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-	}
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+    }
 
 }

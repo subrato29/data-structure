@@ -37,7 +37,7 @@ package leetcode_string;
 
 public class IsPrefixOfWord {
 
-	public int isPrefixOfWord(String sentence, String searchWord) {
+    public int isPrefixOfWord(String sentence, String searchWord) {
         String[] array = sentence.split(" ");
         for (int i = 0; i < array.length; i++) {
             if (array[i].startsWith(searchWord)) {
@@ -46,10 +46,10 @@ public class IsPrefixOfWord {
         }
         return -1;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

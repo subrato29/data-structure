@@ -68,33 +68,35 @@ import java.util.List;
 
 public class ValidWordSquare {
 
-	public static boolean solution (List<String> words) {
-		for (int row = 0; row < words.size(); row++) {
-			String rowWiseWord = words.get(row);
-			if(!rowWiseWord.equals(helper(words, row))) {
-				return false;
-			}
-		}
-		return true;
-	}
-	
-	public static String helper (List<String> words, int col) {
-		String colWiseWord = "";
-		for (int row = 0; row < words.size(); row++) {
-			String word = words.get(row);
-			if (word.length() > col) {
-				colWiseWord += word.charAt(col);
-			}
-		}
-		return colWiseWord;
-	}
-	
-	public static void main(String[] args) {
-		String[] array = {"ball",
-				  "area",
-				  "read",
-				  "lady"};
-		System.out.println(solution(Arrays.asList(array)));
-	}
+    public static boolean solution(List < String > words) {
+        for (int row = 0; row < words.size(); row++) {
+            String rowWiseWord = words.get(row);
+            if (!rowWiseWord.equals(helper(words, row))) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static String helper(List < String > words, int col) {
+        String colWiseWord = "";
+        for (int row = 0; row < words.size(); row++) {
+            String word = words.get(row);
+            if (word.length() > col) {
+                colWiseWord += word.charAt(col);
+            }
+        }
+        return colWiseWord;
+    }
+
+    public static void main(String[] args) {
+        String[] array = {
+            "ball",
+            "area",
+            "read",
+            "lady"
+        };
+        System.out.println(solution(Arrays.asList(array)));
+    }
 
 }

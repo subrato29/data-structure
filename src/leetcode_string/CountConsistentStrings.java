@@ -25,15 +25,15 @@ package leetcode_string;
 
 public class CountConsistentStrings {
 
-	public int countConsistentStrings(String allowed, String[] words) {
+    public int countConsistentStrings(String allowed, String[] words) {
         int counter = 0;
         for (int i = 0; i < words.length; i++) {
             counter += helper(allowed, words[i]);
         }
         return counter;
     }
-    
-    public int helper (String allowed, String word) {
+
+    public int helper(String allowed, String word) {
         char[] array = word.toCharArray();
         for (int i = 0; i < array.length; i++) {
             if (allowed.indexOf(array[i]) == -1) {
@@ -42,10 +42,10 @@ public class CountConsistentStrings {
         }
         return 1;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

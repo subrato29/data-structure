@@ -28,7 +28,7 @@ package leetcode_string;
 
 public class LongestCommonPrefix {
 
-	public String longestCommonPrefix(String[] strs) {
+    public String longestCommonPrefix(String[] strs) {
         String prefix = strs[0];
         for (int i = 1; i < strs.length; i++) {
             while (strs[i].indexOf(prefix) != 0) {
@@ -37,10 +37,10 @@ public class LongestCommonPrefix {
         }
         return prefix;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

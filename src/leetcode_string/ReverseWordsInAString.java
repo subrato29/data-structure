@@ -19,25 +19,25 @@ import java.util.List;
 import java.util.Set;
 
 public class ReverseWordsInAString {
-	public static String solution (String string) {
-		Set<String> set = new LinkedHashSet<String>();		
-		String[] array = string.split(" ");
-		for (int i = 0; i < array.length; i++) {
-			set.add(array[i].trim());
-		}
-		List<String> list = new ArrayList<String>(set);
-		Collections.reverse(list);
+    public static String solution(String string) {
+        Set < String > set = new LinkedHashSet < String > ();
+        String[] array = string.split(" ");
+        for (int i = 0; i < array.length; i++) {
+            set.add(array[i].trim());
+        }
+        List < String > list = new ArrayList < String > (set);
+        Collections.reverse(list);
 
-		StringBuilder sb = new StringBuilder();
-		
-		Iterator<String> itr = list.iterator();
-		while (itr.hasNext()) {
-			sb.append(itr.next() + " ");
-		}
-		return sb.toString();
- 	}
-	public static void main(String[] args) {
-		System.out.println(solution ("       the sky       is   blue"));
-	}
+        StringBuilder sb = new StringBuilder();
+
+        Iterator < String > itr = list.iterator();
+        while (itr.hasNext()) {
+            sb.append(itr.next() + " ");
+        }
+        return sb.toString();
+    }
+    public static void main(String[] args) {
+        System.out.println(solution("       the sky       is   blue"));
+    }
 
 }

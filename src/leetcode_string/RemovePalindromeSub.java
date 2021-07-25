@@ -29,7 +29,7 @@ package leetcode_string;
 
 public class RemovePalindromeSub {
 
-	public int removePalindromeSub(String s) {
+    public int removePalindromeSub(String s) {
         boolean isPalindrome = true;
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) != s.charAt(s.length() - 1 - i)) {
@@ -41,11 +41,11 @@ public class RemovePalindromeSub {
         }
         return 2;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		String str = "thequickbrownfoxjumpsoverthelazydog";
-		System.out.println(str.length());
-	}
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        String str = "thequickbrownfoxjumpsoverthelazydog";
+        System.out.println(str.length());
+    }
 
 }

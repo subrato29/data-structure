@@ -18,41 +18,41 @@ package leetcode_string;
 
 public class ToLowerCase {
 
-	public String toLowerCase(String str) {
+    public String toLowerCase(String str) {
         StringBuffer res = new StringBuffer();
-        for(int i=0;i<str.length();i++)
-          if(str.charAt(i)>='A' && str.charAt(i)<='Z') {
-            res.append((char)(str.charAt(i) + ('a' - 'A')));   
-          }else {
-            res.append(str.charAt(i));   
-          }
+        for (int i = 0; i < str.length(); i++)
+            if (str.charAt(i) >= 'A' && str.charAt(i) <= 'Z') {
+                res.append((char)(str.charAt(i) + ('a' - 'A')));
+            } else {
+                res.append(str.charAt(i));
+            }
         return res.toString();
     }
-	
-	public static int maxRepeating(String sequence, String word) {
+
+    public static int maxRepeating(String sequence, String word) {
         if (sequence.indexOf(word) == -1) {
             return 0;
         }
         int counter = 0;
         while (sequence.indexOf(word) != -1) {
-        	counter++;
+            counter++;
             int index = sequence.indexOf(word);
             sequence = sequence.substring(index + word.length());
             if (word.length() == sequence.length()) {
-            	break;
+                break;
             }
         }
         return counter;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//System.out.println(2 == 2);
-		String str = "aaabaaaabaaabaaaabaaaabaaaabaaaaba";
-		//System.out.println(str.substring(2));
-		//"aaabaaaabaaabaaaabaaaabaaaabaaaaba"
-		//"aaaba"
-		System.out.println(maxRepeating ("aaabaaaabaaabaaaabaaaabaaaabaaaaba", "aaaba"));
-	}
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        //System.out.println(2 == 2);
+        String str = "aaabaaaabaaabaaaabaaaabaaaabaaaaba";
+        //System.out.println(str.substring(2));
+        //"aaabaaaabaaabaaaabaaaabaaaabaaaaba"
+        //"aaaba"
+        System.out.println(maxRepeating("aaabaaaabaaabaaaabaaaabaaaabaaaaba", "aaaba"));
+    }
 
 }

@@ -51,70 +51,70 @@ import java.util.Map;
 
 public class CompareVersionNumbers {
 
-	static String SEPERATOR = "\\.";
-	
-	public static int solution (String version1, String version2) {
-		if (version1.split(SEPERATOR).length > version2.split(SEPERATOR).length) {
-			return helper (version1, version2, true);
-		} else if (version1.split(SEPERATOR).length < version2.split(SEPERATOR).length) {
-			return helper (version2, version1, false);
-		} else {
-			return helper (version1, version2, true);
-		}
-	}
-	
-	public static int helper (String bigger, String smaller, boolean bool) {
-		Map<Integer, String> map = new HashMap<Integer, String>();
-		for (int i = 0; i < bigger.split(SEPERATOR).length; i++) {
-			map.put(i, bigger.split(SEPERATOR)[i]);
-		}
-		Iterator<Integer> itr = map.keySet().iterator();
-		if (bigger.split(SEPERATOR).length == smaller.split(SEPERATOR).length) {
-			while (itr.hasNext()) {
-				int key = itr.next();
-				int value = Integer.parseInt(map.get(key));
-				if (value > Integer.parseInt(smaller.split(SEPERATOR)[key])) {
-					return 1;
-				} else if (value < Integer.parseInt(smaller.split(SEPERATOR)[key])) {
-					return -1;
-				}
-			}
-		} else if (bigger.split(SEPERATOR).length > smaller.split(SEPERATOR).length) {
-			while (itr.hasNext()) {
-				int key = itr.next();
-				int value = Integer.parseInt(map.get(key));
-				if (key < smaller.split(SEPERATOR).length) {
-					if (value > Integer.parseInt(smaller.split(SEPERATOR)[key])) {
-						if (bool) {
-							return 1;
-						} else {
-							return -1;
-						}
-					} else if (value < Integer.parseInt(smaller.split(SEPERATOR)[key])) {
-						if (bool) {
-							return -1;
-						} else {
-							return 1;
-						}
-					}	
-				} else {
-					if (value > 0) {
-						if (bool) {
-							return 1;
-						} else {
-							return -1;
-						}
-					}
-				}
-			}
-		}
-		return 0;
-	}
-	
-	public static void main(String[] args) {
-		String version1 = "1.0.1.1"; 
-		String version2 = "1.1.0";
-		System.out.println(solution (version1, version2));
-	}
+    static String SEPERATOR = "\\.";
+
+    public static int solution(String version1, String version2) {
+        if (version1.split(SEPERATOR).length > version2.split(SEPERATOR).length) {
+            return helper(version1, version2, true);
+        } else if (version1.split(SEPERATOR).length < version2.split(SEPERATOR).length) {
+            return helper(version2, version1, false);
+        } else {
+            return helper(version1, version2, true);
+        }
+    }
+
+    public static int helper(String bigger, String smaller, boolean bool) {
+        Map < Integer, String > map = new HashMap < Integer, String > ();
+        for (int i = 0; i < bigger.split(SEPERATOR).length; i++) {
+            map.put(i, bigger.split(SEPERATOR)[i]);
+        }
+        Iterator < Integer > itr = map.keySet().iterator();
+        if (bigger.split(SEPERATOR).length == smaller.split(SEPERATOR).length) {
+            while (itr.hasNext()) {
+                int key = itr.next();
+                int value = Integer.parseInt(map.get(key));
+                if (value > Integer.parseInt(smaller.split(SEPERATOR)[key])) {
+                    return 1;
+                } else if (value < Integer.parseInt(smaller.split(SEPERATOR)[key])) {
+                    return -1;
+                }
+            }
+        } else if (bigger.split(SEPERATOR).length > smaller.split(SEPERATOR).length) {
+            while (itr.hasNext()) {
+                int key = itr.next();
+                int value = Integer.parseInt(map.get(key));
+                if (key < smaller.split(SEPERATOR).length) {
+                    if (value > Integer.parseInt(smaller.split(SEPERATOR)[key])) {
+                        if (bool) {
+                            return 1;
+                        } else {
+                            return -1;
+                        }
+                    } else if (value < Integer.parseInt(smaller.split(SEPERATOR)[key])) {
+                        if (bool) {
+                            return -1;
+                        } else {
+                            return 1;
+                        }
+                    }
+                } else {
+                    if (value > 0) {
+                        if (bool) {
+                            return 1;
+                        } else {
+                            return -1;
+                        }
+                    }
+                }
+            }
+        }
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        String version1 = "1.0.1.1";
+        String version2 = "1.1.0";
+        System.out.println(solution(version1, version2));
+    }
 
 }

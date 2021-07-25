@@ -32,23 +32,23 @@ import java.util.Map;
 
 public class MaxLengthBetweenEqualCharacters {
 
-	public int maxLengthBetweenEqualCharacters(String s) {
-        Map<Character, Integer> map = new HashMap<Character, Integer>();
+    public int maxLengthBetweenEqualCharacters(String s) {
+        Map < Character, Integer > map = new HashMap < Character, Integer > ();
         int largest = -1;
         for (int i = 0; i < s.length(); i++) {
             char curr = s.charAt(i);
             if (map.containsKey(curr)) {
                 largest = Math.max(largest, i - map.get(curr) - 1);
             } else {
-                map.put(curr, i);   
+                map.put(curr, i);
             }
         }
         return largest;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

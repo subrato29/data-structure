@@ -34,24 +34,24 @@ import java.util.Map;
 
 public class GenerateDocument {
 
-	public static boolean generateDocument(String characters, String document) {
-	    Map<Character, Integer> map = new HashMap<Character, Integer>();
-			for (int i = 0; i < characters.length(); i++) {
-				char ch = characters.charAt(i);
-				map.put (ch, map.getOrDefault(ch, 0) + 1);
-			}
-			for (int i = 0; i < document.length(); i++) {
-				char ch = document.charAt(i);
-				if (!map.containsKey(ch) || map.get(ch) == 0) {
-					return false;
-				}
-				map.put (ch, map.getOrDefault(ch, 0) - 1);
-			}
-		return true;
-	  }
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println(generateDocument("ae", "aea"));
-	}
+    public static boolean generateDocument(String characters, String document) {
+        Map < Character, Integer > map = new HashMap < Character, Integer > ();
+        for (int i = 0; i < characters.length(); i++) {
+            char ch = characters.charAt(i);
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
+        }
+        for (int i = 0; i < document.length(); i++) {
+            char ch = document.charAt(i);
+            if (!map.containsKey(ch) || map.get(ch) == 0) {
+                return false;
+            }
+            map.put(ch, map.getOrDefault(ch, 0) - 1);
+        }
+        return true;
+    }
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        System.out.println(generateDocument("ae", "aea"));
+    }
 
 }

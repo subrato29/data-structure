@@ -16,7 +16,7 @@ package leetcode_string;
 
 public class ReverseStr_II {
 
-	public String reverseStr(String s, int k) {
+    public String reverseStr(String s, int k) {
         if (s == null || s.length() == 0 || k == 0) {
             return "";
         }
@@ -30,17 +30,17 @@ public class ReverseStr_II {
                 char b = sb.charAt(right);
                 sb.setCharAt(left, b);
                 sb.setCharAt(right, a);
-                left ++;
-                right --;
+                left++;
+                right--;
             }
             i = i + 2 * k;
         }
         return sb.toString();
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

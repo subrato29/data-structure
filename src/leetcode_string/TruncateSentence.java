@@ -32,17 +32,17 @@ package leetcode_string;
 
 public class TruncateSentence {
 
-	public String truncateSentence(String s, int k) {
+    public String truncateSentence(String s, int k) {
         String[] array = new String[k];
         for (int i = 0; i < k; i++) {
             array[i] = s.split(" ")[i];
         }
         return String.join(" ", array);
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

@@ -29,15 +29,15 @@ package leetcode_string;
 
 public class HalvesAreAlike {
 
-	public boolean halvesAreAlike(String s) {
+    public boolean halvesAreAlike(String s) {
         int half = s.length() / 2;
-        int counter1 = helper (s.substring(0, half));
-        int counter2 = helper (s.substring(half, s.length()));
-        
+        int counter1 = helper(s.substring(0, half));
+        int counter2 = helper(s.substring(half, s.length()));
+
         return counter1 == counter2;
     }
-    
-    public int helper (String str) {
+
+    public int helper(String str) {
         int counter = 0;
         for (int i = 0; i < str.length(); i++) {
             char curr = str.charAt(i);
@@ -49,10 +49,10 @@ public class HalvesAreAlike {
         }
         return counter;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

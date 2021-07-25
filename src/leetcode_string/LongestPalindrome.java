@@ -29,41 +29,41 @@ package leetcode_string;
 
 public class LongestPalindrome {
 
-	public static String solution (String input) {
-		if(input.isEmpty()) {
-			return null;
-		}
-		if(input.length() == 1) {
-			return input;
-		}
-		String longest = input.substring(0, 1);
-		for (int i = 1; i < input.length(); i++) {
-			String temp = helper (input, i - 1, i + 1);
-			if (temp.length() > longest.length()) {
-				longest = temp;
-			}
-			
-			temp = helper (input, i - 1, i);
-			if (temp.length() > longest.length()) {
-				longest = temp;
-			}
-		}
-		return longest;
-	}
-	
-	public static String helper (String input, int left, int right) {
-		while(left >= 0 && right < input.length()) {
-			if (input.charAt(left) != input.charAt(right)) {
-				break;
-			}
-			left--;
-			right++;
-		}
-		return input.substring(left + 1, right);
-	}
-	
-	public static void main(String[] args) {
-		System.out.println(solution("abaxyzzyxf"));
-	}
+    public static String solution(String input) {
+        if (input.isEmpty()) {
+            return null;
+        }
+        if (input.length() == 1) {
+            return input;
+        }
+        String longest = input.substring(0, 1);
+        for (int i = 1; i < input.length(); i++) {
+            String temp = helper(input, i - 1, i + 1);
+            if (temp.length() > longest.length()) {
+                longest = temp;
+            }
+
+            temp = helper(input, i - 1, i);
+            if (temp.length() > longest.length()) {
+                longest = temp;
+            }
+        }
+        return longest;
+    }
+
+    public static String helper(String input, int left, int right) {
+        while (left >= 0 && right < input.length()) {
+            if (input.charAt(left) != input.charAt(right)) {
+                break;
+            }
+            left--;
+            right++;
+        }
+        return input.substring(left + 1, right);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(solution("abaxyzzyxf"));
+    }
 
 }

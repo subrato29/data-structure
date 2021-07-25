@@ -16,33 +16,33 @@ package leetcode_string;
 
 public class ValidPalindrome {
 
-	public static boolean solution (String string) {
-		if (string.isEmpty()) {
-			return true;
-		}
-		int left = 0;
-		int right = string.length() - 1;
-		while (left <= right) {
-			char leftChar = string.charAt(left);
-			char rightChar = string.charAt(right);
-			if (!Character.isLetterOrDigit(leftChar)) {
-				left++;
-			} else if (!Character.isLetterOrDigit(rightChar)) {
-				right--;
-			} else {
-				if (Character.toLowerCase(leftChar) != Character.toLowerCase(rightChar)) {
-					return false;
-				}
-				left++;
-				right--;
-			}
-		}
-		return true;
-	}
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println(solution ("A man, a plan, a canal: Panama"));
-	}
+    public static boolean solution(String string) {
+        if (string.isEmpty()) {
+            return true;
+        }
+        int left = 0;
+        int right = string.length() - 1;
+        while (left <= right) {
+            char leftChar = string.charAt(left);
+            char rightChar = string.charAt(right);
+            if (!Character.isLetterOrDigit(leftChar)) {
+                left++;
+            } else if (!Character.isLetterOrDigit(rightChar)) {
+                right--;
+            } else {
+                if (Character.toLowerCase(leftChar) != Character.toLowerCase(rightChar)) {
+                    return false;
+                }
+                left++;
+                right--;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        System.out.println(solution("A man, a plan, a canal: Panama"));
+    }
 
 }

@@ -45,53 +45,67 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class StringCompression {
-	
-	public static int solution (char[] array) {
-		if (array.length == 1) {
-			return array.length;
-		}
-		Map<Character, Integer> map = new HashMap<Character, Integer>();
-		
-		int count = 1;
-		String str = "";
-		
-		for (int i = 0; i < array.length; i++) {
-			char key = array[i];
-			if (map.containsKey(key)) {
-				count++;
-			} else {
-				if (map.size() > 0) {
-					str = str + helper(map);
-				}
-				map = new HashMap<Character, Integer>();
-				count = 1;
-			}
-			map.put(key, count);
-		}
-		str = str + helper(map);
-		System.out.println(str);
-		return str.length();
-	}
-	
-	public static String helper(Map<Character, Integer> map) {
-		String str = "";
-		Iterator<Character> itr = map.keySet().iterator();
-		while (itr.hasNext()) {
-			char key = itr.next();
-			int value = map.get(key);
-			if (value == 1) {
-				str = str + String.valueOf(key);
-			} else {
-				str = str + String.valueOf(key) + value; 
-			} 
-		}
-		return str;
-	}
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		char[] array = {'a','b','b','b','b','b','b','b','b','b','b','b','b'};
-		System.out.println(solution(array));
-	}
+
+    public static int solution(char[] array) {
+        if (array.length == 1) {
+            return array.length;
+        }
+        Map < Character, Integer > map = new HashMap < Character, Integer > ();
+
+        int count = 1;
+        String str = "";
+
+        for (int i = 0; i < array.length; i++) {
+            char key = array[i];
+            if (map.containsKey(key)) {
+                count++;
+            } else {
+                if (map.size() > 0) {
+                    str = str + helper(map);
+                }
+                map = new HashMap < Character, Integer > ();
+                count = 1;
+            }
+            map.put(key, count);
+        }
+        str = str + helper(map);
+        System.out.println(str);
+        return str.length();
+    }
+
+    public static String helper(Map < Character, Integer > map) {
+        String str = "";
+        Iterator < Character > itr = map.keySet().iterator();
+        while (itr.hasNext()) {
+            char key = itr.next();
+            int value = map.get(key);
+            if (value == 1) {
+                str = str + String.valueOf(key);
+            } else {
+                str = str + String.valueOf(key) + value;
+            }
+        }
+        return str;
+    }
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        char[] array = {
+            'a',
+            'b',
+            'b',
+            'b',
+            'b',
+            'b',
+            'b',
+            'b',
+            'b',
+            'b',
+            'b',
+            'b',
+            'b'
+        };
+        System.out.println(solution(array));
+    }
 
 }

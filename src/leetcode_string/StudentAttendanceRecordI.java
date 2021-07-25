@@ -18,45 +18,45 @@
 package leetcode_string;
 
 public class StudentAttendanceRecordI {
-	
-	public static boolean solution(String string) {
-		if (string == "") {
-			return true;
-		}
-		string = string.toUpperCase();
-		boolean presence_of_L = false, presence_of_A = false;
 
-		for (int i = 0; i < string.length(); i++) {
-			char ch = string.charAt(i);
-			if (presence_of_L) {
-				if (ch == 'L') {
-					return false;
-				} else {
-					presence_of_L = false;
-				}
-			}
-			if (presence_of_A) {
-				if (ch == 'A') {
-					return false;
-				}
-			}
-			if (ch == 'A') {
-				presence_of_A = true;
-			} else if (ch == 'L') {
-				if (i + 1 < string.length()) {
-					if (string.charAt(i + 1) == 'L') {
-						i = i + 1;
-						presence_of_L = true;
-					}
-				}
-			}
-		}
-		return true;
-	}
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println(solution("PPALLL"));
-	}
+    public static boolean solution(String string) {
+        if (string == "") {
+            return true;
+        }
+        string = string.toUpperCase();
+        boolean presence_of_L = false, presence_of_A = false;
+
+        for (int i = 0; i < string.length(); i++) {
+            char ch = string.charAt(i);
+            if (presence_of_L) {
+                if (ch == 'L') {
+                    return false;
+                } else {
+                    presence_of_L = false;
+                }
+            }
+            if (presence_of_A) {
+                if (ch == 'A') {
+                    return false;
+                }
+            }
+            if (ch == 'A') {
+                presence_of_A = true;
+            } else if (ch == 'L') {
+                if (i + 1 < string.length()) {
+                    if (string.charAt(i + 1) == 'L') {
+                        i = i + 1;
+                        presence_of_L = true;
+                    }
+                }
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        System.out.println(solution("PPALLL"));
+    }
 
 }

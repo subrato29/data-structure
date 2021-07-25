@@ -33,30 +33,30 @@ import java.util.Stack;
 
 public class MinimumAddtoMakeParenthesesValid {
 
-	public static int solution (String input) {
-		Map<Character, Character> map = new HashMap<>();
-		map.put ('(',')');
-		
-		Stack<Character> stack = new Stack();
-		int count = 0;
-		for (int i = 0; i < input.length(); i++) {
-			char curr = input.charAt(i);
-			if (map.containsKey (curr)) {
-				stack.push (curr);
-			} else if (map.values().contains(curr)){
-				if (!stack.empty() && map.get (stack.peek()) == curr) {
-					stack.pop();
-				} else {
-					count++;
-				}
-			}
-		}
-		return stack.size() + count;
-	}
-	
-	public static void main(String[] args) {
-		String string = "()";
-		System.out.println(solution(string));
-	}
+    public static int solution(String input) {
+        Map < Character, Character > map = new HashMap < > ();
+        map.put('(', ')');
+
+        Stack < Character > stack = new Stack();
+        int count = 0;
+        for (int i = 0; i < input.length(); i++) {
+            char curr = input.charAt(i);
+            if (map.containsKey(curr)) {
+                stack.push(curr);
+            } else if (map.values().contains(curr)) {
+                if (!stack.empty() && map.get(stack.peek()) == curr) {
+                    stack.pop();
+                } else {
+                    count++;
+                }
+            }
+        }
+        return stack.size() + count;
+    }
+
+    public static void main(String[] args) {
+        String string = "()";
+        System.out.println(solution(string));
+    }
 
 }

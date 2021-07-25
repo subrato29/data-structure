@@ -32,7 +32,7 @@ package leetcode_string;
 
 public class BalancedStringSplit {
 
-	public int balancedStringSplit(String s) {
+    public int balancedStringSplit(String s) {
         int counter = 0;
         int res = 0;
         for (int i = 0; i < s.length(); i++) {
@@ -47,10 +47,10 @@ public class BalancedStringSplit {
         }
         return res;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }
