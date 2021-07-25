@@ -24,36 +24,45 @@ package leetcode_array;
 import java.util.Arrays;
 
 public class SortColors {
-	public static void sortColors(int[] nums) {
+    public static void sortColors(int[] nums) {
         int zeroPos = 0, twoPos = nums.length - 1;
         int i = 0;
-        while(i <= twoPos){
-            if(nums[i] == 0){
-            	swap(nums, i, zeroPos);
-            	zeroPos++;
+        while (i <= twoPos) {
+            if (nums[i] == 0) {
+                swap(nums, i, zeroPos);
+                zeroPos++;
                 i++;
-            } else if(nums[i] == 2){
+            } else if (nums[i] == 2) {
                 swap(nums, i, twoPos);
                 twoPos--;
             } else {
-            	i++;
+                i++;
             }
         }
         System.out.println(Arrays.toString(nums));
     }
 
-	
-	public static void swap (int[] array, int index1, int index2) {
-		int temp = array[index2];
-		array[index2] = array[index1];
-		array[index1] = temp;
-	}
 
-	
-	public static void main(String[] args) {
-		int[] array = {2, 0, 2, 1, 0, 2, 0, 1};
-		//int[] array = {2, 0, 1};
-		sortColors(array);
-	}
+    public static void swap(int[] array, int index1, int index2) {
+        int temp = array[index2];
+        array[index2] = array[index1];
+        array[index1] = temp;
+    }
+
+
+    public static void main(String[] args) {
+        int[] array = {
+            2,
+            0,
+            2,
+            1,
+            0,
+            2,
+            0,
+            1
+        };
+        //int[] array = {2, 0, 1};
+        sortColors(array);
+    }
 
 }

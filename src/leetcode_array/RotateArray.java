@@ -28,35 +28,45 @@ import java.util.Arrays;
 
 public class RotateArray {
 
-	public static int[] rotate(int[] nums, int k) {
-		if (nums.length == 0) {
-			return new int[] {-1};
-		}
-		if (nums.length == 1) {
-			return nums;
-		}
+    public static int[] rotate(int[] nums, int k) {
+        if (nums.length == 0) {
+            return new int[] {
+                -1
+            };
+        }
+        if (nums.length == 1) {
+            return nums;
+        }
 
-		int counter = 0;
-		while (counter < k) {
-			helperRotate(nums);
-			counter++;
-		}
-		return nums;
-	}
-	
-	public static void helperRotate(int[] nums) {
-		int length = nums.length;
-		int lastElement = nums[nums.length - 1];
-		for (int i = length - 1; i >= 1; i--) {
-			nums[i] = nums[i - 1];
-		}
-		nums[0] = lastElement;
-	}
-	
-	public static void main(String[] args) {
-		int[] nums = {1,2,3,4,5,6,7};
-		int k = 2;
-		System.out.println(Arrays.toString(rotate(nums, k)));
-	}
+        int counter = 0;
+        while (counter < k) {
+            helperRotate(nums);
+            counter++;
+        }
+        return nums;
+    }
+
+    public static void helperRotate(int[] nums) {
+        int length = nums.length;
+        int lastElement = nums[nums.length - 1];
+        for (int i = length - 1; i >= 1; i--) {
+            nums[i] = nums[i - 1];
+        }
+        nums[0] = lastElement;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+        };
+        int k = 2;
+        System.out.println(Arrays.toString(rotate(nums, k)));
+    }
 
 }

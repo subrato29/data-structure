@@ -21,8 +21,8 @@ increasing.
 package leetcode_array;
 
 public class LongestIncreasingSubsequence {
-	
-	public static int longestIncreasingContinuousSubsequence(int[] A) {
+
+    public static int longestIncreasingContinuousSubsequence(int[] A) {
         if (A == null || A.length == 0) {
             return 0;
         }
@@ -30,23 +30,32 @@ public class LongestIncreasingSubsequence {
         int maxLength = 1;
         for (int i = 1; i < A.length; i++) {
             if (A[i] > A[i - 1]) {
-            	pointer++;
+                pointer++;
             } else {
-            	pointer = 1;
+                pointer = 1;
             }
             maxLength = Math.max(maxLength, pointer);
         }
         return maxLength;
     }
-	
-	public static void main(String[] args) {
-		//int[] nums = {1, 3, 5, 4, 7, 2, 4, 5, 8, 9, 1, 10, 12};
-		//int[] nums = {1, 3, 5, 4, 7};
-		//int[] nums = {2, 2, 2, 2, 2};
-		//int[] nums = {1, 3, 5, 7};
-		//int[] nums = {1, 3, 5, 4, 2, 3, 4};
-		int[] nums = {1, 3, 5, 4, 2, 3, 4, 5};
-		System.out.println(longestIncreasingContinuousSubsequence(nums));
-	}
+
+    public static void main(String[] args) {
+        //int[] nums = {1, 3, 5, 4, 7, 2, 4, 5, 8, 9, 1, 10, 12};
+        //int[] nums = {1, 3, 5, 4, 7};
+        //int[] nums = {2, 2, 2, 2, 2};
+        //int[] nums = {1, 3, 5, 7};
+        //int[] nums = {1, 3, 5, 4, 2, 3, 4};
+        int[] nums = {
+            1,
+            3,
+            5,
+            4,
+            2,
+            3,
+            4,
+            5
+        };
+        System.out.println(longestIncreasingContinuousSubsequence(nums));
+    }
 
 }

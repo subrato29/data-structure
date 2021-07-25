@@ -23,23 +23,33 @@ import java.util.Map;
 
 public class TwoSum {
 
-	public static int[] solution (int[] arr, int sum) {
-		Map<Integer, Integer> map = new HashMap<>();
-		int result = 0;
-		for (int i = 0; i < arr.length ; i++) {
-			result = sum - arr[i];
-			if (map.containsKey(result)) {
-				return new int[] {map.get(result), i};
-			} else {
-				map.put(arr[i], i);
-			}
-		}
-		return new int[] {0, 0};
-	}
-	
-	public static void main(String[] args) {
-		int [] arr = {3, 2, 11, 7};
-		System.out.println(Arrays.toString(solution(arr, 10)));
-	}
+    public static int[] solution(int[] arr, int sum) {
+        Map < Integer, Integer > map = new HashMap < > ();
+        int result = 0;
+        for (int i = 0; i < arr.length; i++) {
+            result = sum - arr[i];
+            if (map.containsKey(result)) {
+                return new int[] {
+                    map.get(result), i
+                };
+            } else {
+                map.put(arr[i], i);
+            }
+        }
+        return new int[] {
+            0,
+            0
+        };
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {
+            3,
+            2,
+            11,
+            7
+        };
+        System.out.println(Arrays.toString(solution(arr, 10)));
+    }
 
 }

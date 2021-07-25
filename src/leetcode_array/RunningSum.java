@@ -21,7 +21,7 @@ package leetcode_array;
 
 public class RunningSum {
 
-	public int[] runningSum(int[] nums) {
+    public int[] runningSum(int[] nums) {
         int runningSum = 0;
         for (int i = 0; i < nums.length; i++) {
             runningSum += nums[i];
@@ -29,10 +29,10 @@ public class RunningSum {
         }
         return nums;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

@@ -24,20 +24,20 @@ A[i] > A[i+1] > ... > A[A.length - 1]
 package leetcode_array;
 
 public class ValidMountainArray {
-	public boolean validMountainArray(int[] A) {
+    public boolean validMountainArray(int[] A) {
         if (A == null || A.length < 3) return false;
         int n = A.length;
         int i;
-        for (i = 1; i < n && A[i] > A[i - 1]; i++) ;
+        for (i = 1; i < n && A[i] > A[i - 1]; i++);
         if (i == 1 || i == n) return false;
-        for (; i < n && A[i] < A[i - 1]; i++) ;
+        for (; i < n && A[i] < A[i - 1]; i++);
         if (i != n) return false;
 
         return true;
     }
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

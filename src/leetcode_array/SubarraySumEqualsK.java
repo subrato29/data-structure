@@ -15,25 +15,30 @@ import java.util.HashMap;
 
 public class SubarraySumEqualsK {
 
-	public static int subarraySumEqualsK (int[] nums, int k) {
-		HashMap<Integer, Integer> map = new HashMap<>();
-	    map.put(0, 1);
-	 
-	    int count = 0;
-	    int sum = 0;
+    public static int subarraySumEqualsK(int[] nums, int k) {
+        HashMap < Integer, Integer > map = new HashMap < > ();
+        map.put(0, 1);
 
-	    for(int i = 0; i < nums.length; i++){
-	        sum += nums[i];
-	        int n = map.getOrDefault(sum-k, 0);
-	        count += n;
-	        map.put(sum, map.getOrDefault(sum,0) + 1);
-	    }	 
-	    return count;
-	}
-	
-	public static void main(String[] args) {
-		int[] nums = {1, 2, 3, 4};
-		System.out.println(subarraySumEqualsK(nums, 3));
-	}
+        int count = 0;
+        int sum = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            sum += nums[i];
+            int n = map.getOrDefault(sum - k, 0);
+            count += n;
+            map.put(sum, map.getOrDefault(sum, 0) + 1);
+        }
+        return count;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {
+            1,
+            2,
+            3,
+            4
+        };
+        System.out.println(subarraySumEqualsK(nums, 3));
+    }
 
 }

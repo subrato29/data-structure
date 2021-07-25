@@ -24,7 +24,7 @@ package leetcode_array;
 
 public class ReplaceElements {
 
-	public int[] replaceElements(int[] arr) {
+    public int[] replaceElements(int[] arr) {
         int max = -1, temp;
         int n = arr.length;
         for (int i = n - 1; i >= 0; i--) {
@@ -34,10 +34,10 @@ public class ReplaceElements {
         }
         return arr;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

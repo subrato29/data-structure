@@ -22,8 +22,8 @@ import java.util.Map;
 
 public class ContainsNearbyDuplicate {
 
-	public boolean containsNearbyDuplicate(int[] nums, int k) {
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+    public boolean containsNearbyDuplicate(int[] nums, int k) {
+        Map < Integer, Integer > map = new HashMap < Integer, Integer > ();
         int prevIndex = 0;
         int currIndex = 0;
         for (int i = 0; i < nums.length; i++) {
@@ -35,14 +35,14 @@ public class ContainsNearbyDuplicate {
                     return true;
                 }
             }
-            map.put (curr, i);
+            map.put(curr, i);
         }
         return false;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

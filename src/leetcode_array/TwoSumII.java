@@ -25,28 +25,34 @@ package leetcode_array;
 
 public class TwoSumII {
 
-	public static int[] soluton(int[] array, int target) {
-		if (array == null || array.length == 0) {
-			return new int[] {-1, -1}; 
-		}
-		int start = 0;
-		int end = array.length - 1;
-		while (start < end) {
-			int potentialTarget = array[start] + array[end];
-			if (potentialTarget > target) {
-				end--;
-			} else if (potentialTarget < target) {
-				start++;
-			} else {
-				return new int[] {start + 1, end + 1};
-			}
-		}
-		return new int[] {-1, -1};
-	}
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static int[] soluton(int[] array, int target) {
+        if (array == null || array.length == 0) {
+            return new int[] {
+                -1, -1
+            };
+        }
+        int start = 0;
+        int end = array.length - 1;
+        while (start < end) {
+            int potentialTarget = array[start] + array[end];
+            if (potentialTarget > target) {
+                end--;
+            } else if (potentialTarget < target) {
+                start++;
+            } else {
+                return new int[] {
+                    start + 1, end + 1
+                };
+            }
+        }
+        return new int[] {
+            -1, -1
+        };
+    }
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

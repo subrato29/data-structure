@@ -23,7 +23,7 @@ package leetcode_array;
 
 public class NumIdenticalPairs {
 
-	public int numIdenticalPairs(int[] nums) {
+    public int numIdenticalPairs(int[] nums) {
         int counter = 0;
         for (int i = 0; i < nums.length - 1; i++) {
             for (int j = i + 1; j < nums.length; j++) {
@@ -34,10 +34,10 @@ public class NumIdenticalPairs {
         }
         return counter;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

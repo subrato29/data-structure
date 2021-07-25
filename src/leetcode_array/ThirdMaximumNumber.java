@@ -26,9 +26,13 @@ import java.util.TreeSet;
 
 public class ThirdMaximumNumber {
 
-	public static int thirdMax(int[] nums) {
-		int index = 0;
-        long[] result = {Long.MIN_VALUE, Long.MIN_VALUE, Long.MIN_VALUE};
+    public static int thirdMax(int[] nums) {
+        int index = 0;
+        long[] result = {
+            Long.MIN_VALUE,
+            Long.MIN_VALUE,
+            Long.MIN_VALUE
+        };
 
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] > result[0]) {
@@ -45,13 +49,18 @@ public class ThirdMaximumNumber {
                 index++;
             }
         }
-        return index > 2 ? (int)result[2] : (int)result[0];
+        return index > 2 ? (int) result[2] : (int) result[0];
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int[] arr = {2, 2, 3, 1};
-		System.out.println(thirdMax(arr));
-	}
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        int[] arr = {
+            2,
+            2,
+            3,
+            1
+        };
+        System.out.println(thirdMax(arr));
+    }
 
 }

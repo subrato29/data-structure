@@ -21,13 +21,13 @@ public class ProductOfArrayExceptSelf {
         int[] ans = new int[nums.length];
         int mul = 1;
         for (int i = 0; i < nums.length; i++) {
-          ans[i] = mul;
-          mul *= nums[i];
+            ans[i] = mul;
+            mul *= nums[i];
         }
         mul = 1;
         for (int i = nums.length - 1; i >= 0; i--) {
-          ans[i] *= mul;
-          mul *= nums[i];
+            ans[i] *= mul;
+            mul *= nums[i];
         }
         return ans;
     }
@@ -49,10 +49,15 @@ public class ProductOfArrayExceptSelf {
     ans[2] => [24 * 1, 8, 6]
     mul => 24
 	*/
-    
-	public static void main(String[] args) {
-		int[] arr = {1, 2, 3, 4};
-		System.out.println(Arrays.toString(productExceptSelf(arr)));
-	}
+
+    public static void main(String[] args) {
+        int[] arr = {
+            1,
+            2,
+            3,
+            4
+        };
+        System.out.println(Arrays.toString(productExceptSelf(arr)));
+    }
 
 }

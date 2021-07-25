@@ -21,7 +21,7 @@ package leetcode_array;
 
 public class MaxSubArray {
 
-	public int maxSubArray(int[] nums) {
+    public int maxSubArray(int[] nums) {
         int largestSum = nums[0];
         int currSum = nums[0];
         for (int i = 1; i < nums.length; i++) {
@@ -30,10 +30,10 @@ public class MaxSubArray {
         }
         return largestSum;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

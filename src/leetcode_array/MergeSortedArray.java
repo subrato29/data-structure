@@ -19,9 +19,9 @@ package leetcode_array;
 import java.util.Arrays;
 
 public class MergeSortedArray {
-	
-	public int[] merge(int[] nums1, int m, int[] nums2, int n) {
-		int newLength = m + n;
+
+    public int[] merge(int[] nums1, int m, int[] nums2, int n) {
+        int newLength = m + n;
         int counter = 0;
         for (int i = m; i < newLength; i++) {
             nums1[i] = nums2[counter];
@@ -30,12 +30,23 @@ public class MergeSortedArray {
         Arrays.sort(nums1);
         return nums1;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int[] nums1 = {1,2,3,0,0,0};
-		int[] nums2 = {2,5,6};
-		System.out.println(Arrays.toString(new MergeSortedArray().merge(nums1, 3, nums2, 3)));
-	}
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        int[] nums1 = {
+            1,
+            2,
+            3,
+            0,
+            0,
+            0
+        };
+        int[] nums2 = {
+            2,
+            5,
+            6
+        };
+        System.out.println(Arrays.toString(new MergeSortedArray().merge(nums1, 3, nums2, 3)));
+    }
 
 }
