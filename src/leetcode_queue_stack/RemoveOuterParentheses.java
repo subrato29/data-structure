@@ -38,7 +38,7 @@ package leetcode_queue_stack;
 
 public class RemoveOuterParentheses {
 
-	public String removeOuterParentheses(String s) {
+    public String removeOuterParentheses(String s) {
         StringBuilder sb = new StringBuilder();
         int open = 0;
         int close = 0;
@@ -46,7 +46,7 @@ public class RemoveOuterParentheses {
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '(') {
                 open++;
-            }else if (s.charAt(i) == ')') {
+            } else if (s.charAt(i) == ')') {
                 close++;
             }
             if (open == close) {
@@ -56,9 +56,9 @@ public class RemoveOuterParentheses {
         }
         return sb.toString();
     }
-	
-	public static void main(String[] args) {
-		
-	}
+
+    public static void main(String[] args) {
+
+    }
 
 }

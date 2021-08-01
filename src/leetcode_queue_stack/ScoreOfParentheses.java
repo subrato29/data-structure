@@ -41,8 +41,8 @@ import java.util.Stack;
 
 public class ScoreOfParentheses {
 
-	public int scoreOfParentheses(String S) {
-        Stack<Integer> stack = new Stack<Integer>();
+    public int scoreOfParentheses(String S) {
+        Stack < Integer > stack = new Stack < Integer > ();
         int score = 0;
         for (int i = 0; i < S.length(); i++) {
             char ch = S.charAt(i);
@@ -55,10 +55,10 @@ public class ScoreOfParentheses {
         }
         return score;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

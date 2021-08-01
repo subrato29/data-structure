@@ -54,11 +54,11 @@ import java.util.Stack;
 
 public class CalPoints {
 
-	public int calPoints(String[] ops) {
-        Stack<String> stack = new Stack<String>();
+    public int calPoints(String[] ops) {
+        Stack < String > stack = new Stack < String > ();
         for (int i = 0; i < ops.length; i++) {
             if (!stack.isEmpty()) {
-            	int stackSize = stack.size();
+                int stackSize = stack.size();
                 if (ops[i].equals("C")) {
                     stack.pop();
                 } else if (ops[i].equals("D")) {
@@ -78,10 +78,10 @@ public class CalPoints {
         }
         return sum;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

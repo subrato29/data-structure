@@ -26,8 +26,8 @@ import java.util.Stack;
 
 public class RemoveDuplicates {
 
-	public String removeDuplicates(String s) {
-        Stack<Character> stack = new Stack<Character>();
+    public String removeDuplicates(String s) {
+        Stack < Character > stack = new Stack < Character > ();
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
@@ -42,9 +42,9 @@ public class RemoveDuplicates {
         }
         return sb.toString();
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-	}
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+    }
 
 }

@@ -32,9 +32,9 @@ import java.util.Stack;
 
 public class NextGreaterElement {
 
-	public int[] nextGreaterElement(int[] nums1, int[] nums2) {
-        Stack<Integer> stack = new Stack<Integer>();
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+    public int[] nextGreaterElement(int[] nums1, int[] nums2) {
+        Stack < Integer > stack = new Stack < Integer > ();
+        Map < Integer, Integer > map = new HashMap < Integer, Integer > ();
         for (int i = 0; i < nums2.length; i++) {
             int num = nums2[i];
             while (!stack.isEmpty() && stack.peek() < num) {
@@ -47,10 +47,10 @@ public class NextGreaterElement {
         }
         return nums1;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

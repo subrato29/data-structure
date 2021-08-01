@@ -39,20 +39,20 @@ import java.util.Stack;
 
 public class BackspaceCompare {
 
-	public boolean backspaceCompare(String s, String t) {
+    public boolean backspaceCompare(String s, String t) {
         return helper(s).equals(helper(t));
     }
-    
+
     public String helper(String s) {
-        Stack<Character> stack = new Stack<Character>();
+        Stack < Character > stack = new Stack < Character > ();
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < s.length(); i++) {
-             char ch = s.charAt(i);
+            char ch = s.charAt(i);
             if (!stack.isEmpty() && ch == '#') {
                 stack.pop();
             } else {
                 if (ch != '#') {
-                    stack.push(ch);   
+                    stack.push(ch);
                 }
             }
         }
@@ -61,10 +61,10 @@ public class BackspaceCompare {
         }
         return sb.toString();
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }

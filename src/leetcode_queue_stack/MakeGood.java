@@ -36,15 +36,15 @@ import java.util.Stack;
 
 public class MakeGood {
 
-	public String makeGood(String s) {
-        Stack<String> stack = new Stack<String>();
+    public String makeGood(String s) {
+        Stack < String > stack = new Stack < String > ();
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < s.length(); i++) {
             String ch = String.valueOf(s.charAt(i));
             if (!stack.isEmpty() && (!stack.peek().equals(ch)) && (stack.peek().toUpperCase().equals(ch))) {
-                stack.pop();   
-            } else if (!stack.isEmpty() && (!stack.peek().equals(ch)) && (stack.peek().equals(ch.toUpperCase()))){
-                stack.pop();   
+                stack.pop();
+            } else if (!stack.isEmpty() && (!stack.peek().equals(ch)) && (stack.peek().equals(ch.toUpperCase()))) {
+                stack.pop();
             } else {
                 stack.push(ch);
             }
@@ -54,9 +54,9 @@ public class MakeGood {
         }
         return sb.toString();
     }
-	
-	public static void main(String[] args) {
-		
-	}
+
+    public static void main(String[] args) {
+
+    }
 
 }
