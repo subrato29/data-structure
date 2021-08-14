@@ -1,4 +1,4 @@
-Leedcode solutions in Java
+DS & Algo using Java
 -----------------------------------
 - Author: Subrato Sarkar
 - Leetcode profile: https://leetcode.com/Subrato29/
