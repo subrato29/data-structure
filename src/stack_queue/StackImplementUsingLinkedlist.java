@@ -1,5 +1,4 @@
 package stack_queue;
-import javax.xml.soap.Node;
 
 public class StackImplementUsingLinkedlist {
 	

@@ -1,7 +1,5 @@
 package practice;
 
-import javax.xml.soap.Node;
-
 public class LinkedlistStack {
 	Node head;
 	
