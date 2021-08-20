@@ -2,6 +2,7 @@ DS & Algo using Java
 -----------------------------------
 - Author: Subrato Sarkar
 - Leetcode profile: https://leetcode.com/Subrato29/
+- Leetcode username: subrato29
 - GFG: https://auth.geeksforgeeks.org/user/subratosarkar29
 - Programming language used: Java
 - Repo url: https://github.com/subrato29/data-structure
