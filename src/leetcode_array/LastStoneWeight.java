@@ -40,9 +40,6 @@ import java.util.Collections;
 public class LastStoneWeight {
 
     public int lastStoneWeight(int[] stones) {
-        if (stones.length == 1) {
-            return stones[0];
-        }
         ArrayList < Integer > list = new ArrayList < Integer > ();
         for (int i = 0; i < stones.length; i++) {
             list.add(stones[i]);
