@@ -48,7 +48,6 @@ public class LastStoneWeight {
         while (list.size() > 1) {
             int haviest = list.remove(list.size() - 1);
             int haviestSecond = list.remove(list.size() - 1);
-            Collections.sort(list);
             if (haviest != haviestSecond) {
                 list.add(haviest - haviestSecond);
             }
