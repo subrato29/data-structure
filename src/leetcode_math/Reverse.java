@@ -41,7 +41,6 @@ public class Reverse {
         }
         long reverse = 0;
         while (x > 0) {
-            int temp = x % 10;
             reverse = (reverse * 10) + x % 10;
             x /= 10;
         }
