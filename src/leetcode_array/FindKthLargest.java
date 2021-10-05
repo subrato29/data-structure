@@ -24,18 +24,21 @@ Output: 4
 
 package leetcode_array;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.PriorityQueue;
 
 public class FindKthLargest {
 
     public int findKthLargest(int[] nums, int k) {
-        ArrayList < Integer > list = new ArrayList < Integer > ();
+        PriorityQueue < Integer > maxHeap = new PriorityQueue < Integer > ((a, b) -> b - a);
         for (int i = 0; i < nums.length; i++) {
-            list.add(nums[i]);
+            maxHeap.add(nums[i]);
         }
-        Collections.sort(list);
-        return list.get(nums.length - k);
+        int i = 0;
+        while (i < k - 1) {
+            maxHeap.poll();
+            i++;
+        }
+        return maxHeap.poll();
     }
 
     public static void main(String[] args) {
