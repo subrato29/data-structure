@@ -32,7 +32,7 @@ Explanation: "bbaA" is also a valid answer, but "Aabb" is incorrect.
 Note that 'A' and 'a' are treated as two different characters.
  */
 
-package leetcode_string;
+package leetcode_hashing;
 
 import java.util.HashMap;
 import java.util.PriorityQueue;
