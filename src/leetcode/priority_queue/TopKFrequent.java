@@ -26,7 +26,7 @@ k is in the range [1, the number of unique elements in the array].
 It is guaranteed that the answer is unique.
 */
 
-package heap_priority_queue;
+package leetcode.priority_queue;
 
 import java.util.ArrayList;
 import java.util.HashMap;

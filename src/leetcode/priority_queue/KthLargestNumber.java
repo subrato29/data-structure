@@ -37,7 +37,7 @@ The numbers in nums sorted in non-decreasing order are ["0","0"].
 The 2nd largest integer in nums is "0".
  */
 
-package heap_priority_queue;
+package leetcode.priority_queue;
 
 import java.util.PriorityQueue;
 

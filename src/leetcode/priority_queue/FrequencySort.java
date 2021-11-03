@@ -32,7 +32,7 @@ Explanation: "bbaA" is also a valid answer, but "Aabb" is incorrect.
 Note that 'A' and 'a' are treated as two different characters.
  */
 
-package heap_priority_queue;
+package leetcode.priority_queue;
 
 import java.util.HashMap;
 import java.util.PriorityQueue;
