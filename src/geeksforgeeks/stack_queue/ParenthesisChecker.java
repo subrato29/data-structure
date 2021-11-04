@@ -44,7 +44,7 @@ Constraints:
 
 Note: The drive code prints "balanced" if function return true, otherwise it prints "not balanced".
  */
-package geeksforgeeks_stack_queue;
+package geeksforgeeks.stack_queue;
 
 import java.util.HashMap;
 import java.util.Stack;
