@@ -1,7 +1,7 @@
 //Print the first and final occurrence of a number in a sorted array of integers.
 //e.g. int[] list = {1,2,3,4,5,5,7,8}
 
-package company.amazonqae;
+package company.amazon;
 
 import java.util.Arrays;
 import java.util.HashMap;

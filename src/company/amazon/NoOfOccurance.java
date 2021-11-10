@@ -1,6 +1,6 @@
 //Write a script to count the number of occurrences of the given element in an array.
 
-package company.amazonqae;
+package company.amazon;
 
 public class NoOfOccurance {
 	

@@ -1,6 +1,6 @@
 //Given a number in an array form. Write a program to move all zeros to the end.
 
-package company.amazonqae;
+package company.amazon;
 
 import java.util.Arrays;
 

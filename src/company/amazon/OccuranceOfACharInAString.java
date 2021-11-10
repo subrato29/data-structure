@@ -1,6 +1,6 @@
 //Write a script to print the no. of occurrences of a given character or all letters in a string.
 
-package company.amazonqae;
+package company.amazon;
 
 import java.util.HashMap;
 import java.util.Map;

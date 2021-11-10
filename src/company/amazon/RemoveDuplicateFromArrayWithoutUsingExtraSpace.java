@@ -1,4 +1,4 @@
-package company.amazonqae;
+package company.amazon;
 
 public class RemoveDuplicateFromArrayWithoutUsingExtraSpace {
 

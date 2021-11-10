@@ -1,6 +1,6 @@
 //How to reverse an array in the subset of N? e.g. Input: [1,3,5,7,9,11,15,17,19], Output: [5,3,1,11,9,7,19,17,15].
 
-package company.amazonqae;
+package company.amazon;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -20,7 +20,7 @@
  * case letters. The returned elements order does not matter.
  */
 
-package company.amazonqae;
+package company.amazon;
 
 import java.util.ArrayList;
 import java.util.HashSet;

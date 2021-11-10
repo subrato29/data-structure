@@ -1,4 +1,4 @@
-package company.amazonqae;
+package company.amazon;
 
 import java.util.ArrayList;
 import java.util.Arrays;

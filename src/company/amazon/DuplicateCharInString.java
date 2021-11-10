@@ -1,6 +1,6 @@
 //Write code to count the duplicate characters in a given string.
 
-package company.amazonqae;
+package company.amazon;
 
 import java.util.Set;
 import java.util.TreeSet;

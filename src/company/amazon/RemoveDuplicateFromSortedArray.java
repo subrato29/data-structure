@@ -1,4 +1,4 @@
-package company.amazonqae;
+package company.amazon;
 
 import java.util.Arrays;
 import java.util.HashSet;
