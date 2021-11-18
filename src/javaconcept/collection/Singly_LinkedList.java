@@ -1,4 +1,4 @@
-package java_collection;
+package javaconcept.collection;
 
 public class Singly_LinkedList {
 	

@@ -2,9 +2,6 @@
 
 package company.amazon;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class OccuranceOfACharInAString {
 
 	public static int solution (String str, String a) {
