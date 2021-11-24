@@ -45,6 +45,16 @@ public class SingleNumber {
         return list.get(0);
     }
 
+    //time complexity: O(n)
+    //Space complexity: O(1)
+    public int singleNumber1(int[] nums) {
+        int res = 0;
+        for (int num: nums) {
+            res ^= num;
+        }
+        return res;
+    }
+
     public static void main(String[] args) {
         // TODO Auto-generated method stub
         int[] nums = {
