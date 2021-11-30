@@ -52,6 +52,17 @@ public class HasPathSum {
         hasPathSumHelper(root.left, branchSum, listOfSum);
         hasPathSumHelper(root.right, branchSum, listOfSum);
     }
+    
+    //Another way
+    public boolean hasPathSum1(TreeNode root, int targetSum) {
+        if (root == null) {
+            return false;
+        } else if (root.left == null && root.right == null && targetSum - root.val == 0) {
+            return true;
+        } else {
+            return hasPathSum (root.left, targetSum - root.val) || hasPathSum (root.right, targetSum - root.val);
+        }
+    }
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
