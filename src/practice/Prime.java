@@ -1,6 +1,6 @@
 package practice;
 
-import misc_gouthampradhan.CountPrimes;
+import leetcode.misc1.CountPrimes;
 
 public class Prime {
 
