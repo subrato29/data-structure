@@ -48,6 +48,7 @@ public class AddBinary {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
         System.out.println(addBinary("1010", "1011"));
+        System.out.println(addBinary("1010", "101"));
     }
 
 }
