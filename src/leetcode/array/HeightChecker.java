@@ -39,7 +39,7 @@ heights:  [1,2,3,4,5]
 expected: [1,2,3,4,5]
 All indices match.
  */
-package leetcode.math;
+package leetcode.array;
 
 import java.util.Arrays;
 
