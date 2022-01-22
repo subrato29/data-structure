@@ -52,17 +52,25 @@ public class TargetIndices {
             int mid = low + (high - low) / 2;
             if (nums[mid] == target) {
                 list.add(mid);
-                while (mid > 0 && nums[mid] == nums[mid - 1]) {
-                    if (!list.contains(mid - 1)) {
-                        list.add(mid - 1);
+                while (mid > 0) {
+                    if (nums[mid] == nums[mid - 1]) {
+                        if (!list.contains(mid - 1)) {
+                            list.add(mid - 1);
+                        }
+                        mid = mid - 1;
+                    } else {
+                        break;
                     }
-                    mid = mid - 1;
                 }
-                while (mid < nums.length - 1 && nums[mid] == nums[mid + 1]) {
-                    if (!list.contains(mid + 1)) {
-                        list.add(mid + 1);
+                while (mid < nums.length - 1) {
+                    if (nums[mid] == nums[mid + 1]) {
+                        if (!list.contains(mid + 1)) {
+                            list.add(mid + 1);
+                        }
+                        mid = mid + 1;
+                    } else {
+                        break;
                     }
-                    mid = mid + 1;
                 }
                 Collections.sort(list);
                 return list;
