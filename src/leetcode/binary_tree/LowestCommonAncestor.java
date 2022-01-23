@@ -28,7 +28,7 @@ Input: root = [2,1], p = 2, q = 1
 Output: 2
  */
 
-package leetcode.BinaryTree;
+package leetcode.binary_tree;
 
 public class LowestCommonAncestor {
 

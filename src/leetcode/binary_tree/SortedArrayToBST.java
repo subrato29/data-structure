@@ -24,7 +24,7 @@ Output: [3,1]
 Explanation: [1,3] and [3,1] are both a height-balanced BSTs.
  */
 
-package leetcode.BinaryTree;
+package leetcode.binary_tree;
 
 public class SortedArrayToBST {
 

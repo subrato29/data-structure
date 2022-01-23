@@ -27,7 +27,7 @@ Output: []
 
 https://www.youtube.com/watch?v=3B5gnrwRmOA
  */
-package leetcode.BinaryTree;
+package leetcode.binary_tree;
 
 import java.util.ArrayList;
 import java.util.List;

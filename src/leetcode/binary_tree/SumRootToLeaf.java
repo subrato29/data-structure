@@ -32,7 +32,7 @@ Example 4:
 Input: root = [1,1]
 Output: 3
  */
-package leetcode.BinaryTree;
+package leetcode.binary_tree;
 
 import java.util.ArrayList;
 

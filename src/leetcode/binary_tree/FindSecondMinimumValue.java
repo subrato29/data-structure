@@ -25,7 +25,7 @@ Input: root = [2,2,2]
 Output: -1
 Explanation: The smallest value is 2, but there isn't any second smallest value.
  */
-package leetcode.BinaryTree;
+package leetcode.binary_tree;
 
 import java.util.ArrayList;
 import java.util.Collections;

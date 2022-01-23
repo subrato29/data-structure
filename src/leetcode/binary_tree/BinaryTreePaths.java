@@ -12,7 +12,7 @@ Input: root = [1]
 Output: ["1"]
  */
 
-package leetcode.BinaryTree;
+package leetcode.binary_tree;
 
 import java.util.ArrayList;
 import java.util.List;

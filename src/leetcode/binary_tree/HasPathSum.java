@@ -15,7 +15,7 @@ Input: root = [1,2], targetSum = 0
 Output: false
  */
 
-package leetcode.BinaryTree;
+package leetcode.binary_tree;
 
 import java.util.ArrayList;
 

@@ -1,8 +1,8 @@
-package leetcode.BinaryTree;
+package leetcode.binary_tree;
 
 import java.util.TreeMap;
 
-import leetcode.BinaryTree.BinaryTreePaths.TreeNode;
+import leetcode.binary_tree.BinaryTreePaths.TreeNode;
 
 public class DeepestLeavesSum {
 

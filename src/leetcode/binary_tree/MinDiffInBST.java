@@ -19,7 +19,7 @@ Example 2:
 Input: root = [1,0,48,null,null,12,49]
 Output: 1
  */
-package leetcode.BinaryTree;
+package leetcode.binary_tree;
 
 import java.util.ArrayList;
 import java.util.Collections;

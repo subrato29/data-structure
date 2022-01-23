@@ -26,7 +26,7 @@ Input: p = [1,2,1], q = [1,1,2]
 Output: false
  */
 
-package leetcode.BinaryTree;
+package leetcode.binary_tree;
 
 public class IsSameTree {
 

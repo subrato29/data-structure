@@ -23,7 +23,7 @@ Example 3:
 Input: root = []
 Output: []
  */
-package leetcode.BinaryTree;
+package leetcode.binary_tree;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

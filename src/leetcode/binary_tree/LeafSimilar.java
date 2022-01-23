@@ -37,7 +37,7 @@ Example 5:
 Input: root1 = [1,2,3], root2 = [1,3,2]
 Output: false
  */
-package leetcode.BinaryTree;
+package leetcode.binary_tree;
 
 import java.util.ArrayList;
 import java.util.List;

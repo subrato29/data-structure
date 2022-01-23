@@ -23,7 +23,7 @@ Input: root = [1,2,3,null,4]
 Output: "1(2()(4))(3)"
 Explanation: Almost the same as the first example, except we cannot omit the first parenthesis pair to break the one-to-one mapping relationship between the input and the output.
  */
-package leetcode.BinaryTree;
+package leetcode.binary_tree;
 
 public class Tree2str {
 

@@ -15,7 +15,7 @@ Output: false
 Explanation: The root node's value is 5 but its right child's value is 4.
  */
 
-package leetcode.BinaryTree;
+package leetcode.binary_tree;
 
 public class IsValidBST {
 

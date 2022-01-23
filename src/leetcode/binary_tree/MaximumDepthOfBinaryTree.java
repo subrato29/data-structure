@@ -23,7 +23,7 @@ Output: 1
 //TimeComplexity: O(n);
 //SpaceComplexity: O(h);
 
-package leetcode.BinaryTree;
+package leetcode.binary_tree;
 
 public class MaximumDepthOfBinaryTree {
 

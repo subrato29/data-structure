@@ -9,7 +9,7 @@ Input: root = [1,2,2,null,3,null,3]
 Output: false
  */
 
-package leetcode.BinaryTree;
+package leetcode.binary_tree;
 
 public class IsSymmetric {
 

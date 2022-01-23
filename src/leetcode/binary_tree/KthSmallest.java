@@ -22,7 +22,7 @@ Output: 3
 
 //Time complexity: O(n)
 //Space complexity: O(n)
-package leetcode.BinaryTree;
+package leetcode.binary_tree;
 
 import java.util.ArrayList;
 

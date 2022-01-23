@@ -21,7 +21,7 @@ Example 2:
 Input: [2,2,2,5,2]
 Output: false
  */
-package leetcode.BinaryTree;
+package leetcode.binary_tree;
 
 import java.util.HashSet;
 import java.util.Set;

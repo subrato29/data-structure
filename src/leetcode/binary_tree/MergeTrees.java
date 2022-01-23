@@ -25,7 +25,7 @@ Example 2:
 Input: root1 = [1], root2 = [1,2]
 Output: [2,2]
  */
-package leetcode.BinaryTree;
+package leetcode.binary_tree;
 
 public class MergeTrees {
     public class TreeNode {

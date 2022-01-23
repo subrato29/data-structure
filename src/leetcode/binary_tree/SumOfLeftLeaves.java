@@ -1,4 +1,4 @@
-package leetcode.BinaryTree;
+package leetcode.binary_tree;
 
 /**
  * 404. Sum of Left Leaves
