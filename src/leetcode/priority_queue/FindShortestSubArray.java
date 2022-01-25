@@ -43,7 +43,7 @@ public class FindShortestSubArray {
         for (int num: nums) {
             map.put(num, map.getOrDefault(num, 0) + 1);
         }
-        PriorityQueue < Integer > maxHeap = new PriorityQueue < Integer > ((key1, key2) - > map.get(key2) - map.get(key1));
+        PriorityQueue < Integer > maxHeap = new PriorityQueue < Integer > ((key1, key2) -> map.get(key2) - map.get(key1));
         maxHeap.addAll(map.keySet());
         int elementWithMaxFreq = maxHeap.poll();
         int maxFreq = map.get(elementWithMaxFreq);
