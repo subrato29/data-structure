@@ -30,9 +30,7 @@ public class CommonChars {
 
     public List < String > commonChars(String[] words) {
         HashMap < Character, Integer > map = new HashMap < Character, Integer > ();
-        for (char ch: words[0].toCharArray()) {
-            map.put(ch, map.getOrDefault(ch, 0) + 1);
-        }
+        map = getMap(words[0]);
         for (int i = 1; i < words.length; i++) {
             Iterator < Character > itr = map.keySet().iterator();
             while (itr.hasNext()) {
