@@ -28,7 +28,7 @@ Example 3:
 Input: n = 15
 Output: ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz"]
  */
-package leetcode.google;
+package leetcode.company.google;
 
 import java.util.ArrayList;
 import java.util.List;
