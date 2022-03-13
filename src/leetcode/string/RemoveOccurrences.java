@@ -50,9 +50,9 @@ public class RemoveOccurrences {
             if (index == 0) {
                 sb.append(s.substring(partLength, s.length()));
             } else {
-                String part1 = s.substring(0, index);
-                String part2 = s.substring(part1.length() + partLength, s.length());
-                sb.append(part1).append(part2);
+                String beforeOccurance = s.substring(0, index);
+                String afterOccurance = s.substring(beforeOccurance.length() + partLength, s.length());
+                sb.append(beforeOccurance).append(afterOccurance);
             }
             s = sb.toString();
             sb = new StringBuilder();
