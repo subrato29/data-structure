@@ -33,38 +33,38 @@ import java.util.List;
 
 public class FindAndReplacePattern {
 
-	public List<String> findAndReplacePattern(String[] words, String pattern) {
-        List <String> list = new ArrayList <String> ();
-        for (String word : words) {
-            if (matcher (word, pattern)) {
-                list.add (word);
+    public List < String > findAndReplacePattern(String[] words, String pattern) {
+        List < String > list = new ArrayList < String > ();
+        for (String word: words) {
+            if (matcher(word, pattern)) {
+                list.add(word);
             }
         }
         return list;
     }
-    
-    public boolean matcher (String word, String pattern) {
-        HashMap <Character, Character> wordMap = new HashMap <Character, Character> ();
-        HashMap <Character, Character> patternMap = new HashMap <Character, Character> ();
-        for (int i = 0; i < word.length (); i++) {
-            char w = word.charAt (i);
-            char p = pattern.charAt (i);
-            if (!wordMap.containsKey (w)) {
-                wordMap.put (w, p);
+
+    public boolean matcher(String word, String pattern) {
+        HashMap < Character, Character > wordMap = new HashMap < Character, Character > ();
+        HashMap < Character, Character > patternMap = new HashMap < Character, Character > ();
+        for (int i = 0; i < word.length(); i++) {
+            char w = word.charAt(i);
+            char p = pattern.charAt(i);
+            if (!wordMap.containsKey(w)) {
+                wordMap.put(w, p);
             }
-            if (!patternMap.containsKey (p)) {
-                patternMap.put (p, w);
+            if (!patternMap.containsKey(p)) {
+                patternMap.put(p, w);
             }
-            if (wordMap.get (w) != p || patternMap.get (p) != w) {
+            if (wordMap.get(w) != p || patternMap.get(p) != w) {
                 return false;
             }
         }
         return true;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
 
 }
