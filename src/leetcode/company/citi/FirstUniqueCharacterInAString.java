@@ -23,7 +23,7 @@ Example 3:
 Input: s = "aabb"
 Output: -1
  */
-package leetcode.string;
+package leetcode.company.citi;
 
 import java.util.HashMap;
 
