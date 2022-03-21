@@ -12,7 +12,7 @@ Example 2:
 Input: "race a car"
 Output: false
  */
-package com.leetcode.autodesk;
+package comany.autodesk;
 
 public class ValidPalindrome {
 
