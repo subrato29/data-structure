@@ -24,7 +24,7 @@ Input: head = []
 Output: []
  */
 
-package leetcode.linkedlist;
+package leetcode.easy;
 
 public class ReverseList {
     //Time: O(n)
