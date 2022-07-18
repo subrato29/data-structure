@@ -1,11 +1,7 @@
 Author: Subrato Sarkar
 ------------------------------
-
-```
-This is a DSA problem solving project
-Repo url: https://github.com/subrato29/data-structure
-
-````
+- This is a DSA problem solving project
+- [Repo url](https://github.com/subrato29/data-structure)
 
 My coding profile:
 ------------------------------
@@ -23,8 +19,5 @@ Java
 
 Notes:
 -----------------------------------------
-```
 Collections with time-complexity
-	- https://www.youtube.com/watch?v=1lqoJ-NSmDE
-
-```
+- [https://www.youtube.com/watch?v=1lqoJ-NSmDE](https://www.youtube.com/watch?v=1lqoJ-NSmDE)
