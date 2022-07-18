@@ -7,20 +7,13 @@ Repo url: https://github.com/subrato29/data-structure
 
 ````
 
-Leetcode profile:
+Coding profile:
 ------------------------------
 
 ```
 
-https://leetcode.com/Subrato29/
-
-```
-
-GFG profile:
-------------------------------
-
-```
-https://auth.geeksforgeeks.org/user/subratosarkar29
+[My Leetcode Profile](https://leetcode.com/Subrato29/)
+[My GFG Profile](https://auth.geeksforgeeks.org/user/subratosarkar29)
 
 ```
 
