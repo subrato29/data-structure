@@ -1,9 +1,40 @@
-DS & Algo using Java
------------------------------------
-- Author: Subrato Sarkar
-- Leetcode profile: https://leetcode.com/Subrato29/
-- Leetcode username: subrato29
-- GFG: https://auth.geeksforgeeks.org/user/subratosarkar29
-- Programming language used: Java
-- Repo url: https://github.com/subrato29/data-structure
-- https://www-geeksforgeeks-org.cdn.ampproject.org/c/s/www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/amp/?fbclid=IwAR0x9L8CjfxKNXjKOq8waA2pDvxwhkT1bxm01XgUM631XjM5H6_JdiHsSFA
+Author: Subrato Sarkar
+------------------------------
+
+```
+This is a DSA problem solving project
+Repo url: https://github.com/subrato29/data-structure
+
+````
+
+Leetcode profile:
+------------------------------
+
+```
+
+https://leetcode.com/Subrato29/
+
+```
+
+GFG profile:
+------------------------------
+
+```
+https://auth.geeksforgeeks.org/user/subratosarkar29
+
+```
+
+Programming language used:
+-------------------
+```
+Java
+
+```
+
+Notes:
+-----------------------------------------
+```
+Collections with time-complexity
+	- https://www.youtube.com/watch?v=1lqoJ-NSmDE
+
+```
