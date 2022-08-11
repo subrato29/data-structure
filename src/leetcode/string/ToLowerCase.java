@@ -18,7 +18,19 @@ package leetcode.string;
 
 public class ToLowerCase {
 
-    public String toLowerCase(String str) {
+    public String toLowerCase(String s) {
+        String result = "";
+        for (char ch: s.toCharArray()) {
+            if (Character.isUpperCase(ch)) {
+                result += (char)(ch + 32);
+            } else {
+                result += ch;
+            }
+        }
+        return result;
+    }
+
+    public String toLowerCase_1(String str) {
         StringBuffer res = new StringBuffer();
         for (int i = 0; i < str.length(); i++)
             if (str.charAt(i) >= 'A' && str.charAt(i) <= 'Z') {
