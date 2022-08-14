@@ -44,21 +44,16 @@ public class BackspaceCompare {
         return helper(s).equals(helper(t));
     }
 
-    public String helper(String string) {
+    public Stack < Character > helper(String string) {
         Stack < Character > stack = new Stack < Character > ();
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < string.length(); i++) {
-            char ch = string.charAt(i);
-            if (ch == '#' && !stack.isEmpty()) {
-                stack.pop();
-            } else if (ch != '#') {
+        for (char ch: string.toCharArray()) {
+            if (ch != '#') {
                 stack.push(ch);
+            } else if (!stack.isEmpty()) {
+                stack.pop();
             }
         }
-        for (int i = 0; i < stack.size(); i++) {
-            sb.append(stack.get(i));
-        }
-        return sb.toString();
+        return stack;
     }
 
     public static void main(String[] args) {
