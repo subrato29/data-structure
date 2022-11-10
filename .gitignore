@@ -5,3 +5,6 @@ target
 test-output
 .DS_Store
 /bin/
+.idea
+data-structure.iml
+out/
