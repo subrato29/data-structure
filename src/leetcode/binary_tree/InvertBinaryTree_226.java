@@ -22,7 +22,6 @@ package leetcode.binary_tree;
  */
 
 public class InvertBinaryTree_226 {
-
     public TreeNode invertTree(TreeNode root) {
         if (root == null) {
             return root;
