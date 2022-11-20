@@ -21,6 +21,10 @@ package leetcode.binary_tree;
  * Output: []
  */
 
+/**
+ * The time complexity of the above recursive solution is O(n), where n is the total number of nodes in the binary tree.
+ * The program requires O(h) extra space for the call stack, where h is the height of the tree.
+ */
 public class InvertBinaryTree_226 {
     public TreeNode invertTree(TreeNode root) {
         if (root == null) {
