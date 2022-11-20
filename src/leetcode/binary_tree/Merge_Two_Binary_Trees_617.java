@@ -27,7 +27,7 @@ Output: [2,2]
  */
 package leetcode.binary_tree;
 
-public class MergeTrees {
+public class Merge_Two_Binary_Trees_617 {
     public class TreeNode {
         int val;
         TreeNode left;
