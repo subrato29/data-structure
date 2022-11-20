@@ -25,6 +25,10 @@ Example 2:
 Input: root1 = [1], root2 = [1,2]
 Output: [2,2]
  */
+/**
+ * Time complexity: O(n)
+ * Space complexity: O(n)
+ */
 package leetcode.binary_tree;
 
 public class Merge_Two_Binary_Trees_617 {
