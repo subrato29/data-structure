@@ -24,7 +24,7 @@ package leetcode.topInterviewQuestions;
 
 import java.util.*;
 
-public class GroupAnagrams_46 {
+public class GroupAnagrams_49 {
 
     public List<List<String>> groupAnagrams(String[] strs) {
         Map<String, ArrayList<String>> map = new HashMap<>();
