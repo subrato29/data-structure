@@ -26,17 +26,18 @@ package leetcode.string;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 
 public class CountWords {
 
     public int countWords(String[] words1, String[] words2) {
-        HashMap<String, Integer> map = new HashMap<String, Integer>();
-        for (String word1 : words1) {
-            map.put(word1, map.getOrDefault(word1, 0) + 1);
+        Map<String, Integer> map = new HashMap<String, Integer>();
+        for (String word : words1) {
+            map.put(word, map.getOrDefault(word, 0) + 1);
         }
-        for (String word2 : words2) {
-            if (map.containsKey(word2) && map.get(word2) <= 1) {
-                map.put(word2, map.get(word2) - 1);
+        for (String word : words2) {
+            if (map.containsKey(word) && map.get(word) <= 1) {
+                map.put(word, map.get(word) - 1);
             }
         }
         int counter = 0;
