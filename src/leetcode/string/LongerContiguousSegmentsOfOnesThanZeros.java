@@ -31,19 +31,19 @@ public class LongerContiguousSegmentsOfOnesThanZeros {
     public boolean checkZeroOnes(String s) {
         int maxLengthOfContinuousOnes = 0;
         int maxLengthOfContinuousZeros = 0;
-        int ierator = 0;
+        int iterator = 0;
         int indexOfOne = 0;
         int indexOfZero = 0;
-        while (ierator < s.length()) {
-            if (s.charAt(ierator) == '1') {
+        while (iterator < s.length()) {
+            if (s.charAt(iterator) == '1') {
                 indexOfZero = 0;
                 maxLengthOfContinuousOnes = Math.max(maxLengthOfContinuousOnes, ++indexOfOne);
             }
-            else if (s.charAt(ierator) == '0') {
+            else if (s.charAt(iterator) == '0') {
                 indexOfOne = 0;
                 maxLengthOfContinuousZeros = Math.max(maxLengthOfContinuousZeros, ++indexOfZero);
             }
-            ierator++;
+            iterator++;
         }
         return maxLengthOfContinuousOnes > maxLengthOfContinuousZeros;
     }
