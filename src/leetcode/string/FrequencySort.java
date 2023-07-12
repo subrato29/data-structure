@@ -25,27 +25,26 @@
 package leetcode.string;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.PriorityQueue;
 
 public class FrequencySort {
 
     public String frequencySort(String s) {
-        HashMap<Character, Integer> map = new HashMap<Character, Integer>();
-        for (int i = 0; i < s.length(); i++) {
-            char ch = s.charAt(i);
+        Map<Character, Integer> map = new HashMap<>();
+        for (char ch : s.toCharArray()) {
             map.put(ch, map.getOrDefault(ch, 0) + 1);
         }
-        PriorityQueue<Character> maxHeap = new PriorityQueue<Character>((a, b) -> map.get(b) - map.get(a));
-        maxHeap.addAll(map.keySet());
-
-        StringBuilder sb = new StringBuilder();
-        while (!maxHeap.isEmpty()) {
-            char current = maxHeap.poll();
+        PriorityQueue<Character> pq = new PriorityQueue<>((a, b) -> map.get(b) - map.get(a));
+        pq.addAll(map.keySet());
+        String finalString = "";
+        while (!pq.isEmpty()) {
+            char current = pq.poll();
             for (int i = 0; i < map.get(current); i++) {
-                sb.append(current);
+                finalString += current;
             }
         }
-        return sb.toString();
+        return finalString;
     }
 
     public static void main(String[] args) {
