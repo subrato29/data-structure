@@ -1,14 +1,15 @@
 /**
- * Given a non-empty string s, you may delete at most one character. Judge whether you can make it a palindrome.
-	
-	Example 1:
-	Input: "aba"
-	Output: True
-	
-	Example 2:
-	Input: "abca"
-	Output: True
-	Explanation: You could delete the character 'c'.
+ * 680. Valid Palindrome II
+ *
+ * Easy 7.4K 379 Companies
+ *
+ * Given a string s, return true if the s can be palindrome after deleting at most one character from it.
+ *
+ * Example 1: Input: s = "aba" Output: true
+ *
+ * Example 2: Input: s = "abca" Output: true Explanation: You could delete the character 'c'.
+ *
+ * Example 3: Input: s = "abc" Output: false
  */
 package leetcode.string;
 
@@ -22,11 +23,9 @@ public class ValidPalindromeII {
                 if (helper(string, start, end - 1)) {
                     return true;
                 }
-                if (helper(string, start + 1, end)) {
-                    return true;
-                }
-                return false;
-            } else {
+                return helper(string, start + 1, end);
+            }
+            else {
                 start++;
                 end--;
             }
