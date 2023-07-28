@@ -18,7 +18,7 @@ package leetcode.twopointer;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ContainsNearbyDuplicate {
+public class Contains_Duplicate_II {
 
     public boolean containsNearbyDuplicate(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap<>();
