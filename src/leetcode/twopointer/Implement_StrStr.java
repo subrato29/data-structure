@@ -1,63 +1,49 @@
 /**
- * Implement strStr().
-
-Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
-
-Clarification:
-
-What should we return when needle is an empty string? This is a great question to ask during an interview.
-
-For the purpose of this problem, we will return 0 when needle is an empty string. This is consistent to C's strstr() and Java's indexOf().
-
-Example 1:
-Input: haystack = "hello", needle = "ll"
-Output: 2
-
-Example 2:
-Input: haystack = "aaaaa", needle = "bba"
-Output: -1
-
-Example 3:
-Input: haystack = "", needle = ""
-Output: 0
+ * 28. Find the Index of the First Occurrence in a String
+ *
+ * Easy 4.2K 220
+ *
+ * Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if
+ * needle is not part of haystack.
+ *
+ * Example 1: Input: haystack = "sadbutsad", needle = "sad" Output: 0 Explanation: "sad" occurs at index 0 and 6. The
+ * first occurrence is at index 0, so we return 0.
+ *
+ * Example 2: Input: haystack = "leetcode", needle = "leeto" Output: -1 Explanation: "leeto" did not occur in
+ * "leetcode", so we return -1.
  */
 
 package leetcode.twopointer;
 
 public class Implement_StrStr {
 
-	public static int strStr(String haystack, String needle) {
-        if(needle.length() == 0){
-            return 0;
-        }
-        if(haystack.length() == 0){
+    public int strStr(String haystack, String needle) {
+        if (haystack.length() < needle.length()) {
             return -1;
         }
-        if(haystack.length() < needle.length()){
-            return -1;
-        }
+        int haystackPointer = 0;
+        int needlePointer = 0;
+        int restartPoiter = 0;
 
-        int haystack_pointer = 0;
-        int needle_pointer = 0;
-
-        while(haystack_pointer < haystack.length()){
-            if(haystack.charAt(haystack_pointer) == needle.charAt(needle_pointer)){
-                needle_pointer++;
-                if(needle_pointer == needle.length()){
-                    return haystack_pointer - needle_pointer + 1;
+        while (haystackPointer < haystack.length()) {
+            if (haystack.charAt(haystackPointer) == needle.charAt(needlePointer)) {
+                needlePointer++;
+                if (needlePointer == needle.length()) {
+                    return haystackPointer - needlePointer + 1;
                 }
-            }else{
-                haystack_pointer = haystack_pointer - needle_pointer;
-                needle_pointer = 0;
             }
-            haystack_pointer++;
+            else {
+                needlePointer = 0;
+                haystackPointer = restartPoiter;
+                restartPoiter++;
+            }
+            haystackPointer++;
         }
         return -1;
     }
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println(strStr("Happy birthday", "py"));
-	}
+
+    public static void main(String[] args) {
+        
+    }
 
 }
