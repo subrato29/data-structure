@@ -14,8 +14,6 @@
  */
 package leetcode.twopointer;
 
-import java.util.Arrays;
-
 public class MoveAllZeroEnd {
 
     public void moveZeroes(int[] nums) {
