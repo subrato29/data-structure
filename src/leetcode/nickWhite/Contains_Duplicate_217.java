@@ -23,13 +23,13 @@ Example 3:
 Input: nums = [1,1,1,3,3,4,3,2,4,2]
 Output: true
  */
-package leetcode.company.google;
+package leetcode.nickWhite;
 
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class ContainsDuplicate {
+public class Contains_Duplicate_217 {
 
     public boolean containsDuplicate(int[] nums) {
         Set < Integer > set = new HashSet < Integer > ();
