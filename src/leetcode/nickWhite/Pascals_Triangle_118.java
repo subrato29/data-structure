@@ -23,7 +23,7 @@
  Output: [[1]]
  */
 
-package leetcode.nickWhite;
+package src.leetcode.nickWhite;
 
 import java.util.ArrayList;
 import java.util.List;
