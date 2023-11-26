@@ -40,8 +40,8 @@ public class Pascals_Triangle_118 {
             List <Integer> currRow = new ArrayList <Integer> ();
 
             currRow.add(1);
-            for (int prevRowIndex = 1; prevRowIndex < i; prevRowIndex++) {
-                currRow.add(prevRow.get(prevRowIndex - 1) + prevRow.get(prevRowIndex));
+            for (int prevColIndex = 1; prevColIndex < i; prevColIndex++) {
+                currRow.add(prevRow.get(prevColIndex - 1) + prevRow.get(prevColIndex));
             }
             currRow.add(1);
 
