@@ -36,8 +36,8 @@ public class PascalsTriangle_118 {
             List <Integer> currRow = new ArrayList <Integer> ();
 
             currRow.add(1);
-            for (int prevColIndexOfPrevRow = 1; prevColIndexOfPrevRow < i; prevColIndexOfPrevRow++) {
-                currRow.add(prevRow.get(prevColIndexOfPrevRow - 1) + prevRow.get(prevColIndexOfPrevRow));
+            for (int colIndexOfPrevRow = 1; colIndexOfPrevRow < i; colIndexOfPrevRow++) {
+                currRow.add(prevRow.get(colIndexOfPrevRow - 1) + prevRow.get(colIndexOfPrevRow));
             }
             currRow.add(1);
 
