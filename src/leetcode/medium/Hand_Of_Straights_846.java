@@ -34,6 +34,7 @@ public class Hand_Of_Straights_846 {
         for(int value : hand) {
             countMap.put(value, countMap.getOrDefault(value, 0) + 1);
         }
+
         while (countMap.size() > 0) {
             int minValue = countMap.firstKey();
 
