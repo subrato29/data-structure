@@ -27,6 +27,10 @@ Explanation: There are three ways to climb to the top.
 1. 1 step + 1 step + 1 step
 2. 1 step + 2 steps
 3. 2 steps + 1 step
+
+
+Time complexity: O(n)
+Dynamic programming (bottom up approach)
  */
 
 package leetcode.easy;
