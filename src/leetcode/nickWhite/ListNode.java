@@ -1,9 +1,9 @@
-package leetcode.linkedlist;
+package leetcode.nickWhite;
 
 //Definition for singly-linked list.
 public class ListNode {
     int val;
-    public ListNode next;
+    ListNode next;
     ListNode() {}
     ListNode(int val) {
         this.val = val;
