@@ -44,6 +44,25 @@ public class Best_Time_to_Buy_and_Sell_Stock_121 {
         return max;
     }
 
+    //Easier to understand. Another solution
+    public int maxProfit1(int[] prices) {
+        int maxProfit = 0;
+        int left = 0;
+        int right = 1;
+
+        while (right < prices.length) {
+            if(prices[left] < prices[right]) {
+                int profit = prices[right] - prices[left];
+                maxProfit = Math.max(maxProfit, profit);
+            }else {
+                left = right;
+            }
+            right++;
+        }
+
+        return maxProfit;
+    }
+
     public static void main(String[] args) {
         // TODO Auto-generated method stub
 
