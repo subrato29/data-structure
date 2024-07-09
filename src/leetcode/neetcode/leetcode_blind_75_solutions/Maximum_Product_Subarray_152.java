@@ -16,6 +16,22 @@
  * Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
  */
 
+/**
+ * Initialization: We initialize maxProduct, minProduct, and result with the first element of the array. These variables represent the maximum product subarray, the minimum product subarray, and the final result, respectively.
+ *
+ * Iteration: We iterate through the array starting from the second element.
+ *
+ * Swap for Negatives: If the current element is negative, we swap maxProduct and minProduct because multiplying by a negative number flips the maximum and minimum.
+ *
+ * Update maxProduct and minProduct: We update maxProduct and minProduct by comparing the current element and the product of the current element with the previous maxProduct and minProduct.
+ *
+ * Update Result: We update the result with the maximum value of maxProduct.
+ *
+ * This approach ensures that we always keep track of the maximum and minimum products up to the current element, leading to a time complexity of O(n) and a space complexity of 𝑂(1)
+ */
+
+
+
 package leetcode.neetcode.leetcode_blind_75_solutions;
 
 public class Maximum_Product_Subarray_152 {
