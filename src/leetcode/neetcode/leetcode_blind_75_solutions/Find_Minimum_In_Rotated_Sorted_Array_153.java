@@ -40,6 +40,8 @@ public class Find_Minimum_In_Rotated_Sorted_Array_153 {
         int res = nums[0];
 
         while (left <= right) {
+
+             //If a sorted subarray found, then update result with most left element
             if(nums[left] < nums[right]) {
                 res = Math.min(res, nums[left]);
                 break;
