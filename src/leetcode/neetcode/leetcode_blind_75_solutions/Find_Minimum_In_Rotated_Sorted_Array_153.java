@@ -39,18 +39,24 @@ public class Find_Minimum_In_Rotated_Sorted_Array_153 {
         int right = nums.length - 1;
         int res = nums[0];
 
-        while(left < right) {
+        while (left <= right) {
+            if(nums[left] < nums[right]) {
+                res = Math.min(res, nums[left]);
+                break;
+            }
+
             int mid = left + (right - left) / 2;
             res = Math.min(res, nums[mid]);
 
-            // If the mid element is greater than the right most element,
-            // it means the minimum element is on the right side.
-            if(nums[mid] > nums[right]) {
+            /**
+             * Input: nums = [3,4,5,1,2]
+             * if nums[mid] >= nums[left]: search right
+             * else search left
+             */
+            if(nums[mid] >= nums[left]) {
                 left = mid + 1;
             }else {
-                // If the mid element is less than or equal to the right most element,
-                // it means the minimum element is on the left side, or it's the mid element.
-                right = mid;
+                right = mid - 1;
             }
         }
 
