@@ -32,15 +32,15 @@ public class Pascals_Triangle_118 {
         List<List<Integer>> triangle = new ArrayList<>();
         List<Integer> firstRow = new ArrayList<>();
 
-        firstRow.add(1);
-        triangle.add(firstRow);
+        firstRow.add (1);
+        triangle.add (firstRow);
 
-        for(int i = 1; i < numRows; i++) {
-            List <Integer> prevRow = triangle.get(i - 1);
+        for(int rowIndex = 1; rowIndex < numRows; rowIndex++) {
+            List <Integer> prevRow = triangle.get(rowIndex - 1);
             List <Integer> currRow = new ArrayList <Integer> ();
 
             currRow.add(1);
-            for (int colIndexOfPrevRow = 1; colIndexOfPrevRow < i; colIndexOfPrevRow++) {
+            for (int colIndexOfPrevRow = 1; colIndexOfPrevRow < rowIndex; colIndexOfPrevRow++) {
                 currRow.add(prevRow.get(colIndexOfPrevRow - 1) + prevRow.get(colIndexOfPrevRow));
             }
             currRow.add(1);
