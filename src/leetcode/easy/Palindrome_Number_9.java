@@ -36,23 +36,20 @@ package leetcode.easy;
 public class Palindrome_Number_9 {
 
     public boolean isPalindrome(int x) {
+        if(x < 0) {
+            return false;
+        }
+
         int actual = x;
-        if (x == 0) {
-            return true;
-        }
-        if (x < 0 || x % 10 == 0) {
-            return false;
-        }
         int reverse = 0;
+
         while (x > 0) {
-            int pop = x % 10;
+            int temp = x % 10;
+            reverse = reverse * 10 + temp;
             x = x / 10;
-            reverse = (reverse * 10) + pop;
         }
-        if (actual != reverse) {
-            return false;
-        }
-        return true;
+
+        return actual == reverse;
     }
 
     public static void main(String[] args) {
