@@ -18,24 +18,18 @@ import java.util.Arrays;
 public class MoveAllZeroEnd {
 
 	public static int[] moveAllZeroEnd(int[] nums) {
-		if (nums == null) {
-			return new int[] {};
-		}
-		int arrayTraversingPointer = 0;
-		int zeroCountPointer = 0;
-		
-		while (arrayTraversingPointer < nums.length) {
-			if (nums[arrayTraversingPointer] != 0) {
-				nums[zeroCountPointer] = nums[arrayTraversingPointer];
-				zeroCountPointer++;
+		int zerothIndex = 0;
+
+		for (int i = 0; i < nums.length; i++) {
+			if(nums[i] != 0) {
+				nums[zerothIndex++] = nums[i];
 			}
-			arrayTraversingPointer++;
 		}
-		
-		while (zeroCountPointer < nums.length) {
-			nums[zeroCountPointer] = 0;
-			zeroCountPointer++;
+
+		for(int i = zerothIndex; i < nums.length; i++) {
+			nums[i] = 0;
 		}
+
 		return nums;
 	}
 	
