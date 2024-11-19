@@ -32,17 +32,18 @@ package leetcode.easy;
 public class IsMonotonic {
 
     public boolean isMonotonic(int[] A) {
-        boolean isNonDecreasing = true;
-        boolean isNonIncreasing = true;
-        for (int i = 0; i < A.length - 1; i++) {
-            if (A[i] > A[i + 1]) {
-                isNonIncreasing = false;
-            }
-            if (A[i] < A[i + 1]) {
-                isNonDecreasing = false;
+        boolean isIncreasing = true;
+        boolean isDecreasing = true;
+
+        for(int i = 0; i < A.length - 1; i++) {
+            if(A[i] > A[i + 1]) {
+                isIncreasing = false;
+            }else if (A[i] < A[i + 1]) {
+                isDecreasing = false;
             }
         }
-        return isNonDecreasing || isNonIncreasing;
+
+        return isIncreasing || isDecreasing;
     }
 
     public static void main(String[] args) {
