@@ -24,7 +24,8 @@
  * substring with start index = 1 is "ba", which is an anagram of "ab". The substring with start
  * index = 2 is "ab", which is an anagram of "ab".
  */
-package leetcode.hashing;
+
+package src.leetcode.hashing;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -32,33 +33,35 @@ import java.util.List;
 
 public class Anagram {
 
-    public static List < Integer > solution(String input, String string) {
-        List < Integer > list = new ArrayList < Integer > ();
-        if (input.length() < string.length()) {
-            return list;
-        }
-        if (string == "" || input == "") {
-            return list;
-        }
-        int i = 0;
-        int limitOfIteration = input.length() - string.length() + 1;
-        while (i < limitOfIteration) {
-            char[] ch = input.substring(i, i + string.length()).toCharArray();
-            Arrays.sort(ch);
-            String sorted = new String(ch);
+    public static List<Integer> findAnagrams(String s, String p) {
+        List<Integer> anagramStartingIndex = new ArrayList<>();
 
-            ch = string.toCharArray();
-            Arrays.sort(ch);
-            string = new String(ch);
-            if (sorted.equals(string)) {
-                list.add(i);
+        char[] smallerStringArray = p.toCharArray();
+        Arrays.sort(smallerStringArray);
+        String smallerStringSorted = new String(smallerStringArray);
+
+        int index = 0;
+        int highestTraversalIndex = s.length() - p.length() + 1;
+
+        while (index < highestTraversalIndex) {
+            String potentialAnagram = s.substring(index, index + p.length());
+
+            char[] potentialAnagramArray = potentialAnagram.toCharArray();
+            Arrays.sort(potentialAnagramArray);
+            String potentialAnagramSorted = new String(potentialAnagramArray);
+
+            if(smallerStringSorted.equals(potentialAnagramSorted)) {
+                anagramStartingIndex.add (index);
             }
-            i++;
+
+            index++;
         }
-        return list;
+
+        return anagramStartingIndex;
     }
+
     public static void main(String[] args) {
-        System.out.println(solution("cbaebabac", "abc"));
+        System.out.println(findAnagrams("cbaebabac", "abc"));
     }
 
 }
