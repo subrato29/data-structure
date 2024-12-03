@@ -32,10 +32,9 @@ Input: arr = [37,12,28,9,100,56,80,5,12]
 Output: [5,3,4,2,8,6,7,1,3]
  */
 
-package leetcode.hashing;
+package src.leetcode.hashing;
 
-import java.util.Iterator;
-import java.util.TreeMap;
+import java.util.*;
 
 public class ArrayRankTransform {
 
@@ -59,6 +58,30 @@ public class ArrayRankTransform {
             }
         }
         return arr;
+    }
+
+    //Another approach
+    public int[] arrayRankTransform1(int[] arr) {
+        int[] originalArr = Arrays.copyOf(arr, arr.length);
+        Arrays.sort(arr);
+
+        Map<Integer, Integer> map = new HashMap<>();
+        Set<Integer> set = new LinkedHashSet<>();
+
+        for(int num : arr) {
+            set.add(num);
+        }
+
+        int counter = 1;
+        for(int num : set) {
+            map.put(num, counter++);
+        }
+
+        for(int i = 0; i < originalArr.length; i++) {
+            originalArr[i] = map.get(originalArr[i]);
+        }
+
+        return originalArr;
     }
 
     public static void main(String[] args) {
