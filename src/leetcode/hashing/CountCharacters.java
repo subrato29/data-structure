@@ -19,7 +19,7 @@ Output: 10
 Explanation: 
 The strings that can be formed are "hello" and "world" so the answer is 5 + 5 = 10.
  */
-package leetcode.hashing;
+package src.leetcode.hashing;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -28,39 +28,41 @@ import java.util.Map;
 public class CountCharacters {
 
     public int countCharacters(String[] words, String chars) {
-        Map < Character, Integer > targetWord = new HashMap < Character, Integer > ();
-        targetWord = charWiseCount(chars);
-        int sum = 0;
-        for (int i = 0; i < words.length; i++) {
-            String word = words[i];
-            if (wordsFormedByChars(charWiseCount(word), charWiseCount(chars))) {
-                sum += word.length();
+        int length = 0;
+
+        for (String word : words) {
+            if(isCharFormedByWord(word, chars)) {
+                length += word.length();
             }
         }
-        return sum;
+
+        return length;
     }
 
-    public Map < Character, Integer > charWiseCount(String string) {
-        Map < Character, Integer > map = new HashMap < Character, Integer > ();
-        for (int i = 0; i < string.length(); i++) {
-            char ch = string.charAt(i);
+    public Map<Character, Integer> charWiseCount(String word) {
+        Map<Character, Integer> map = new HashMap<>();
+
+        for(char ch : word.toCharArray()) {
             map.put(ch, map.getOrDefault(ch, 0) + 1);
         }
+
         return map;
     }
 
-    public boolean wordsFormedByChars(Map < Character, Integer > word, Map < Character, Integer > targetWord) {
-        Iterator < Character > itr = word.keySet().iterator();
-        while (itr.hasNext()) {
-            char key = itr.next();
-            if (targetWord.keySet().contains(key)) {
-                if (word.get(key) > targetWord.get(key)) {
+    public boolean isCharFormedByWord (String word, String chars) {
+        Map<Character, Integer> mapOfWord = charWiseCount(word);
+        Map<Character, Integer> mapOfChars = charWiseCount(chars);
+
+        for(char ch : word.toCharArray()) {
+            if(mapOfChars.containsKey(ch)) {
+                if(mapOfWord.get(ch) > mapOfChars.get(ch)) {
                     return false;
                 }
-            } else {
+            }else {
                 return false;
             }
         }
+
         return true;
     }
 
