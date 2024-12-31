@@ -1,53 +1,65 @@
-/**
- * S and T are strings composed of lowercase letters.
- * In S, no letter occurs more than once.
- *
- * <p>S was sorted in some custom order previously. We want to permute the characters of T so that
- * they match the order that S was sorted. More specifically, if x occurs before y in S, then x
- * should occur before y in the returned string.
- *
- * <p>Return any permutation of T (as a string) that satisfies this property.
- *
- * <p>Example : Input: S = "cba" T = "abcd" Output: "cbad" Explanation: "a", "b", "c" appear in S,
- * so the order of "a", "b", "c" should be "c", "b", and "a". Since "d" does not appear in S, it can
- * be at any position in T. "dcba", "cdba", "cbda" are also valid outputs.
- *
- * <p>Note:
- *
- * <p>S has length at most 26, and no character is repeated in S. T has length at most 200. S and T
- * consist of lowercase letters only.
- *
- * <p>Solution: O(N) count occurrence of each character and write to the output string
- */
-package leetcode.hashing;
+package src.leetcode.hashing;
 
-import java.util.Iterator;
-import java.util.LinkedHashSet;
-import java.util.Set;
+/**
+ * 791. Custom Sort String
+ *
+ * Medium
+ * You are given two strings order and s. All the characters of order are unique and were sorted in some custom order previously.
+ *
+ * Permute the characters of s so that they match the order that order was sorted. More specifically, if a character x occurs before a character y in order, then x should occur before y in the permuted string.
+ *
+ * Return any permutation of s that satisfies this property.
+ *
+ * Example 1:
+ * Input: order = "cba", s = "abcd"
+ *
+ * Output: "cbad"
+ * Explanation: "a", "b", "c" appear in order, so the order of "a", "b", "c" should be "c", "b", and "a".
+ * Since "d" does not appear in order, it can be at any position in the returned string. "dcba", "cdba", "cbda" are also valid outputs.
+ *
+ * Example 2:
+ * Input: order = "bcafg", s = "abcd"
+ *
+ * Output: "bcad"
+ * Explanation: The characters "b", "c", and "a" from order dictate the order for the characters in s. The character "d" in s does not appear in order, so its position is flexible.
+ * Following the order of appearance in order, "b", "c", and "a" from s should be arranged as "b", "c", "a". "d" can be placed at any position since it's not in order. The output "bcad" correctly follows this rule. Other arrangements like "dbca" or "bcda" would also be valid, as long as "b", "c", "a" maintain their order.
+ *
+ */
+
+import java.util.*;
 
 public class CustomSortString {
 
-    public static String solution(String string1, String string2) {
-        Set < String > set = new LinkedHashSet < String > ();
-        for (int i = 0; i < string1.length(); i++) {
-            char ch = string1.charAt(i);
-            set.add(String.valueOf(ch));
+    public String customSortString(String order, String s) {
+        Map<Character, Integer> freqMap = new HashMap<>();
+        StringBuilder result = new StringBuilder();
+
+        for(char ch : s.toCharArray()) {
+            freqMap.put(ch, freqMap.getOrDefault(ch, 0) + 1);
         }
-        for (int i = 0; i < string2.length(); i++) {
-            char ch = string2.charAt(i);
-            set.add(String.valueOf(ch));
+
+        for(char ch : order.toCharArray()) {
+            if(freqMap.containsKey(ch)) {
+                int occurrence = freqMap.get(ch);
+                for(int i = 0; i < occurrence; i++) {
+                    result.append(ch);
+                }
+                freqMap.remove(ch);
+            }
         }
-        StringBuilder sb = new StringBuilder();
-        Iterator < String > itr = set.iterator();
-        while (itr.hasNext()) {
-            sb.append(itr.next());
+
+        for(char ch : freqMap.keySet()) {
+            int occurrence = freqMap.get(ch);
+            for(int i = 0; i < occurrence; i++) {
+                result.append(ch);
+            }
         }
-        return sb.toString();
+
+        return result.toString();
     }
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        System.out.println(solution("cba", "abcd"));
     }
 
 }
