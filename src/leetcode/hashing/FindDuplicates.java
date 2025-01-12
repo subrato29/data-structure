@@ -26,7 +26,7 @@ Input: nums = [1]
 Output: []
 */
 
-package leetcode.hashing;
+package src.leetcode.hashing;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,15 +34,17 @@ import java.util.List;
 public class FindDuplicates {
 
     public List < Integer > findDuplicates(int[] nums) {
-        List < Integer > list = new ArrayList < > ();
-        for (int i = 0; i < nums.length; i++) {
+        List<Integer> elementsAppearedTwice = new ArrayList<>();
+
+        for(int i = 0; i < nums.length; i++) {
             int index = Math.abs(nums[i]) - 1;
-            if (nums[index] < 0) {
-                list.add(index + 1);
+            if(nums[index] < 0) {
+                elementsAppearedTwice.add(index + 1);
             }
             nums[index] = -nums[index];
         }
-        return list;
+
+        return elementsAppearedTwice;
     }
 
     public static void main(String[] args) {
