@@ -32,29 +32,35 @@ Explanation: "bbaA" is also a valid answer, but "Aabb" is incorrect.
 Note that 'A' and 'a' are treated as two different characters.
  */
 
-package leetcode.hashing;
+package src.leetcode.hashing;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.PriorityQueue;
 
 public class FrequencySort {
 
     public String frequencySort(String s) {
-        HashMap < Character, Integer > map = new HashMap < Character, Integer > ();
-        for (int i = 0; i < s.length(); i++) {
-            char ch = s.charAt(i);
+        Map<Character, Integer> map = new HashMap<>();
+
+        for(char ch : s.toCharArray()) {
             map.put(ch, map.getOrDefault(ch, 0) + 1);
         }
-        PriorityQueue < Character > maxHeap = new PriorityQueue < Character > ((a, b) -> map.get(b) - map.get(a));
-        maxHeap.addAll(map.keySet());
+
+        PriorityQueue<Character> maxHeap = new PriorityQueue<>((a, b) -> map.get(b) - map.get(a));
+        maxHeap.addAll (map.keySet());
 
         StringBuilder sb = new StringBuilder();
-        while (!maxHeap.isEmpty()) {
-            char current = maxHeap.poll();
-            for (int i = 0; i < map.get(current); i++) {
-                sb.append(current);
+
+        while(maxHeap.size() > 0) {
+            char key = maxHeap.poll();
+            int value = map.get(key);
+
+            for(int i = 0; i < value; i++) {
+                sb.append(key);
             }
         }
+
         return sb.toString();
     }
 
