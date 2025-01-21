@@ -23,11 +23,9 @@ Example 2:
 Input: nums = [1,1]
 Output: [1,2]
  */
-package leetcode.hashing;
+package src.leetcode.hashing;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class FindErrorNums {
 
@@ -36,22 +34,26 @@ public class FindErrorNums {
         "rawtypes"
     })
     public static int[] findErrorNums(int[] nums) {
-        Map < Integer, Integer > map = new HashMap();
+        Set<Integer> set = new HashSet();
         int dup = -1, missing = 1;
-        for (int n: nums) {
-            map.put(n, map.getOrDefault(n, 0) + 1);
-        }
-        for (int i = 1; i <= nums.length; i++) {
-            if (map.containsKey(i)) {
-                if (map.get(i) == 2)
-                    dup = i;
-            } else {
-                missing = i;
+
+        for (int num : nums) {
+            if(set.contains(num)) {
+                dup = num;
+            }else {
+                set.add (num);
             }
         }
+
+        for (int i = 1; i <= nums.length; i++) {
+            if (!set.contains(i)) {
+                missing = i;
+            }
+
+        }
         return new int[] {
-            dup,
-            missing
+                dup,
+                missing
         };
     }
 
