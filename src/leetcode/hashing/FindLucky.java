@@ -1,4 +1,4 @@
-package leetcode.hashing;
+package src.leetcode.hashing;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -42,6 +42,7 @@ Input: arr = [7,7,7,7,7,7,7]
 Output: 7
  */
 import java.util.Map;
+import java.util.PriorityQueue;
 
 public class FindLucky {
 
@@ -67,6 +68,27 @@ public class FindLucky {
             return -1;
         }
         return largest;
+    }
+
+    //Another approach
+    public int findLucky1(int[] arr) {
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for(int num : arr) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
+
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> map.get(b) - map.get(a));
+        maxHeap.addAll(map.keySet());
+
+        while (maxHeap.size() > 0) {
+            int potentialLargestLuckyNo = maxHeap.poll();
+            if(map.get(potentialLargestLuckyNo) == potentialLargestLuckyNo) {
+                return potentialLargestLuckyNo;
+            }
+        }
+
+        return -1;
     }
 
     public static void main(String[] args) {
