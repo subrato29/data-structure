@@ -28,27 +28,26 @@ Output: [["a"]]
 
 package leetcode.hashing;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class GroupAnagrams {
 
     public List < List < String >> groupAnagrams(String[] strs) {
-        HashMap < String, ArrayList < String >> map = new HashMap < String, ArrayList < String >> ();
-        for (String str: strs) {
-            char[] arr = str.toCharArray();
-            Arrays.sort(arr);
-            String sorted = new String(arr);
+        Map<String, List<String>> map = new HashMap<>();
 
-            if (map.keySet().contains(sorted)) {
-                map.get(sorted).add(str);
-            } else {
-                map.put(sorted, new ArrayList < String > (Arrays.asList(str)));
+        for(String str : strs) {
+            char[] strArray = str.toCharArray();
+            Arrays.sort(strArray);
+            String sortedString = new String(strArray);
+
+            if(map.containsKey(sortedString)) {
+                map.get(sortedString).add(str);
+            }else {
+                map.put(sortedString, new ArrayList<>(List.of(str)));
             }
         }
-        return new ArrayList < > (map.values());
+
+        return new ArrayList<> (map.values());
     }
 
     public static void main(String[] args) {
