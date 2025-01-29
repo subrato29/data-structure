@@ -26,7 +26,7 @@ Input: strs = ["a"]
 Output: [["a"]]
  */
 
-package leetcode.hashing;
+package src.leetcode.hashing;
 
 import java.util.*;
 
