@@ -20,7 +20,7 @@ Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
 Output: [4,9]
 Explanation: [9,4] is also accepted.
  */
-package leetcode.hashing;
+package src.leetcode.hashing;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,46 +30,31 @@ import java.util.Map;
 
 public class Intersect {
 
-    public static int[] intersect(int[] nums1, int[] nums2) {
-        Map < Integer, Integer > map = new HashMap < Integer, Integer > ();
-        for (int i = 0; i < nums1.length; i++) {
-            int num = nums1[i];
+    public int[] intersect(int[] nums1, int[] nums2) {
+        Map<Integer, Integer> map = new HashMap<>();
+        List<Integer> result = new ArrayList<>();
+
+        for(int num : nums1) {
             map.put(num, map.getOrDefault(num, 0) + 1);
         }
-        List < Integer > list = new ArrayList < Integer > ();
-        for (int i = 0; i < nums2.length; i++) {
-            int key = nums2[i];
-            if (map.containsKey(key)) {
-                int value = map.get(key);
-                if (value == 0) {
-                    map.remove(key);
-                } else {
-                    list.add(key);
-                    map.put(key, value - 1);
-                }
+
+        for(int num : nums2) {
+            if(map.containsKey(num) && map.get(num) > 0) {
+                result.add(num);
+                map.put(num, map.get(num) - 1);
             }
         }
-        int[] result = new int[list.size()];
-        for (int i = 0; i < result.length; i++) {
-            result[i] = list.get(i);
+
+        int[] arr = new int[result.size()];
+        for(int i = 0; i < result.size(); i++) {
+            arr[i] = result.get(i);
         }
-        return result;
+
+        return arr;
     }
 
     public static void main(String[] args) {
-        int[] nums1 = {
-            4,
-            9,
-            5
-        };
-        int[] nums2 = {
-            9,
-            4,
-            9,
-            8,
-            4
-        };
-        System.out.println(Arrays.toString(intersect(nums1, nums2)));
+
     }
 
 }
