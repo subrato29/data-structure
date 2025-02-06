@@ -20,7 +20,7 @@ Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
 Output: [9,4]
 Explanation: [4,9] is also accepted.
  */
-package leetcode.hashing;
+package src.leetcode.hashing;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,23 +33,26 @@ public class Intersection {
 
     // by Hashing
     public int[] intersection(int[] nums1, int[] nums2) {
-        Set < Integer > set = new HashSet < Integer > ();
-        List < Integer > list = new ArrayList < Integer > ();
-        for (int i = 0; i < nums1.length; i++) {
-            set.add(nums1[i]);
+        Set<Integer> set = new HashSet();
+        List<Integer> list = new ArrayList<>();
+
+        for(int num : nums1) {
+            set.add (num);
         }
-        for (int i = 0; i < nums2.length; i++) {
-            int key = nums2[i];
-            if (set.contains(key)) {
-                list.add(key);
-                set.remove(key);
+
+        for(int num : nums2) {
+            if(set.contains(num)) {
+                list.add(num);
+                set.remove(num);
             }
         }
-        int[] result = new int[list.size()];
-        for (int i = 0; i < result.length; i++) {
-            result[i] = list.get(i);
+
+        int[] res = new int[list.size()];
+        for(int i = 0; i < list.size(); i++) {
+            res[i] = list.get(i);
         }
-        return result;
+
+        return res;
     }
 
     //by twopointer
