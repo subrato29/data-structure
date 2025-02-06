@@ -18,7 +18,7 @@ s and t consist of lowercase English letters.
 
 Follow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
  */
-package leetcode.hashing;
+package src.leetcode.hashing;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -27,35 +27,25 @@ import java.util.Map;
 public class IsAnagram {
 
     public boolean isAnagram(String s, String t) {
-        if (s.length() != t.length()) {
+        if(s.length() != t.length()) {
             return false;
         }
-        Map < Character, Integer > sMap = new HashMap < Character, Integer > ();
-        Map < Character, Integer > tMap = new HashMap < Character, Integer > ();
-        sMap = charWiseCount(s);
-        tMap = charWiseCount(t);
 
-        Iterator < Character > itr = sMap.keySet().iterator();
-        while (itr.hasNext()) {
-            char key = itr.next();
-            if (tMap.keySet().contains(key)) {
-                if (!sMap.get(key).equals(tMap.get(key))) {
-                    return false;
-                }
-            } else {
+        Map<Character, Integer> map = new HashMap<>();
+
+        for(char ch : s.toCharArray()) {
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
+        }
+
+        for(char ch : t.toCharArray()) {
+            if(map.containsKey(ch) && map.get(ch) > 0) {
+                map.put(ch, map.get(ch) - 1);
+            }else {
                 return false;
             }
         }
-        return true;
-    }
 
-    public Map < Character, Integer > charWiseCount(String string) {
-        Map < Character, Integer > map = new HashMap < Character, Integer > ();
-        for (int i = 0; i < string.length(); i++) {
-            char ch = string.charAt(i);
-            map.put(ch, map.getOrDefault(ch, 0) + 1);
-        }
-        return map;
+        return true;
     }
 
     public static void main(String[] args) {
