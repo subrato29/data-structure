@@ -21,27 +21,31 @@ Example 2:
 Input: jewels = "z", stones = "ZZ"
 Output: 0
  */
-package leetcode.hashing;
+package src.leetcode.hashing;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class NumJewelsInStones {
 
     public int numJewelsInStones(String jewels, String stones) {
-        Set < Character > set = new HashSet < Character > ();
-        for (int i = 0; i < jewels.length(); i++) {
-            char ch = jewels.charAt(i);
-            set.add(ch);
+        Map<Character, Integer> map = new HashMap();
+
+        for(char ch : stones.toCharArray()) {
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
         }
+
         int counter = 0;
-        for (int i = 0; i < stones.length(); i++) {
-            char ch = stones.charAt(i);
-            if (set.contains(ch)) {
-                counter++;
+
+        for(char ch : jewels.toCharArray()) {
+            if(map.containsKey(ch)) {
+                counter += map.get(ch);
             }
         }
-        return counter++;
+
+        return counter;
     }
 
     public static void main(String[] args) {
