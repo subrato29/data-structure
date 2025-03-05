@@ -1,17 +1,32 @@
 /**
- * Given two strings s and t, write a function to
- * determine if t is an anagram of s.
+ * 242. Valid Anagram
  *
- * <p>For example, s = "anagram", t = "nagaram", return true. s = "rat", t = "car", return false.
+ * Easy
+ * Topics
+ * Companies
+ * Given two strings s and t, return true if t is an anagram of s, and false otherwise.
  *
- * <p>Note: You may assume the string contains only lowercase alphabets.
+ * Example 1:
+ * Input: s = "anagram", t = "nagaram"
+ * Output: true
  *
- * <p>Follow up: What if the inputs contain unicode characters? How would you adapt your solution to
- * such case?
+ * Example 2:
+ * Input: s = "rat", t = "car"
+ * Output: false
+ *
+ *
+ *
+ * Constraints:
+ *
+ * 1 <= s.length, t.length <= 5 * 104
+ * s and t consist of lowercase English letters.
  */
-package leetcode.hashing;
+
+package src.leetcode.hashing;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ValidAnagram {
 
@@ -24,6 +39,28 @@ public class ValidAnagram {
         Arrays.sort(ch);
         String sorted2 = new String(ch);
         return sorted1.equals(sorted2);
+    }
+
+    public boolean isAnagram(String s, String t) {
+        if(s.length() != t.length()) {
+            return false;
+        }
+
+        Map<Character, Integer> map = new HashMap<>();
+
+        for(char ch : s.toCharArray()) {
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
+        }
+
+        for(char ch : t.toCharArray()) {
+            if(map.containsKey(ch) && map.get(ch) > 0) {
+                map.put(ch, map.get(ch) - 1);
+            }else {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     public static void main(String[] args) {
