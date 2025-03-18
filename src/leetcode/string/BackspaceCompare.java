@@ -34,25 +34,27 @@ Output: false
 Explanation: s becomes "c" while t becomes "b".
  */
 
-package leetcode.string;
+package src.leetcode.string;
 
 import java.util.Stack;
 
 public class BackspaceCompare {
 
     public boolean backspaceCompare(String s, String t) {
-        return helper(s).equals(helper(t));
+        return createStringWithoutBackspace(s).equals(createStringWithoutBackspace(t));
     }
 
-    public Stack < Character > helper(String string) {
-        Stack < Character > stack = new Stack < Character > ();
-        for (char ch: string.toCharArray()) {
-            if (ch != '#') {
+    public Stack<Character> createStringWithoutBackspace(String string) {
+        Stack<Character> stack = new Stack<>();
+
+        for(char ch : string.toCharArray()) {
+            if(ch != '#') {
                 stack.push(ch);
-            } else if (!stack.isEmpty()) {
+            }else if(!stack.empty()) {
                 stack.pop();
             }
         }
+
         return stack;
     }
 
