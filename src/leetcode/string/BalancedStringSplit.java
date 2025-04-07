@@ -21,7 +21,7 @@
  * equal number of 'L' and 'R'
  */
 
-package leetcode.string;
+package src.leetcode.string;
 
 public class BalancedStringSplit {
 
