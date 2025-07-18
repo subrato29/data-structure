@@ -19,7 +19,7 @@
  * Example 3: Input: s = "bbb" Output: true Explanation: There are no 'a's, hence, every 'a' appears before every 'b'
  * and we return true.
  */
-package leetcode.string;
+package src.leetcode.string;
 
 public class CheckIfAll_A_AppearsBeforeAll_B {
 
