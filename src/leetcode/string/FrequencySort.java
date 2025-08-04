@@ -22,7 +22,7 @@
  * that 'A' and 'a' are treated as two different characters.
  */
 
-package leetcode.string;
+package src.leetcode.string;
 
 import java.util.HashMap;
 import java.util.Map;
