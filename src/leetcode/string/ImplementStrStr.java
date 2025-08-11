@@ -8,7 +8,7 @@
  * Example 2: Input: haystack = "leetcode", needle = "leeto" Output: -1 Explanation: "leeto" did not occur in
  * "leetcode", so we return -1.
  */
-package leetcode.string;
+package src.leetcode.string;
 
 public class ImplementStrStr {
 
