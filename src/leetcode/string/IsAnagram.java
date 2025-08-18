@@ -14,7 +14,7 @@
  * Example 2: Input: s = "rat", t = "car" Output: false
  */
 
-package leetcode.string;
+package src.leetcode.string;
 
 import java.util.HashMap;
 import java.util.Map;
