@@ -33,7 +33,7 @@ Example 2:
 Input: s = "(1)+((2))+(((3)))"
 Output: 3
  */
-package leetcode.string;
+package src.leetcode.string;
 
 public class MaxDepth {
 
